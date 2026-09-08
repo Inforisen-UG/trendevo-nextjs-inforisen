@@ -183,7 +183,7 @@ export default function FooterSection() {
         <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10 xl:grid-cols-5">
           <div className="flex w-full flex-col gap-4 border-b border-[#d99aff]/25 pb-6 sm:gap-6 sm:border-0 sm:pb-0 xl:max-w-none 2xl:max-w-[339px] dark:border-white/20">
             <div className="flex flex-col gap-3 sm:gap-[18px]">
-              <Link href="/" className="relative inline-block h-10 w-[130px] sm:h-12 sm:w-[152px]">
+              <Link href="/" className="relative inline-block h-14 w-[176px] sm:h-16 sm:w-[200px]">
                 <Image
                   src="/images/icons/site-logo.png"
                   alt="TrendEvo"
