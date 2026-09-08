@@ -13,22 +13,6 @@ type LegalPageHero = {
   lastUpdated: string;
 };
 
-const defaultFaqAnswer =
-  'TrendEvo provides fast, secure SMM services with transparent pricing, multiple payment options, and 24/7 support to help you grow across all major social platforms.';
-
-const defaultFaqItems = [
-  'What is an SMM panel and how does TrendEvo work?',
-  'How fast will my order be delivered?',
-  'Are the followers and engagement real?',
-  'What payment methods do you accept?',
-  'Do you offer reseller or API access?',
-  'Is my account information safe?',
-  'What happens if an order drops?',
-  'How can I contact support?',
-  'Can I place bulk orders?',
-  'Do you offer refunds?',
-].map((question) => ({ question, answer: defaultFaqAnswer }));
-
 type PrivacyPolicyPageData = {
   seo: SEO;
   hero: LegalPageHero;
@@ -55,8 +39,64 @@ export const data: PrivacyPolicyPageData = {
     label: 'FAQ',
     title: 'gt<Frequently> Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Answers to common questions about how TrendEvo collects, uses, shares, and protects your personal information under our Privacy Policy.',
     bg: 'section-7',
-    items: defaultFaqItems,
+    items: [
+      {
+        question: 'What personal information does TrendEvo collect from me?',
+        answer:
+          'TrendEvo may collect your name, email address, account details, order information, transaction records, IP address, and website usage data.',
+      },
+      {
+        question: 'Does TrendEvo need or store my social media passwords?',
+        answer:
+          'No. TrendEvo does not require your social media password to process standard SMM orders. You should never share your social media password when placing an order.',
+      },
+      {
+        question:
+          'Does TrendEvo store my bKash, Nagad, card, or payment credentials?',
+        answer:
+          'TrendEvo may keep transaction records, but sensitive payment credentials are generally processed through the relevant payment provider rather than stored directly by TrendEvo.',
+      },
+      {
+        question:
+          'Why does TrendEvo collect my social media profile or post URL?',
+        answer:
+          'TrendEvo needs the relevant profile, post, video, page, or channel URL to deliver the service to the correct destination.',
+      },
+      {
+        question: 'Does TrendEvo sell my personal information to advertisers?',
+        answer:
+          'No. TrendEvo does not sell your personal information to advertisers for their independent marketing purposes.',
+      },
+      {
+        question: 'Who can TrendEvo share my information with?',
+        answer:
+          'Information may be shared with trusted service providers when necessary for payments, security, website operation, customer support, legal compliance, or service delivery.',
+      },
+      {
+        question:
+          'How long does TrendEvo keep my personal information and order history?',
+        answer:
+          'TrendEvo may retain information as long as reasonably necessary for service operation, transaction records, dispute resolution, fraud prevention, and legal requirements.',
+      },
+      {
+        question:
+          'Can I request access to, correction of, or deletion of my personal data?',
+        answer:
+          'Yes. You may contact TrendEvo to request access to or correction of your information. Deletion requests may be considered where permitted by applicable law.',
+      },
+      {
+        question: 'How does TrendEvo protect my personal information?',
+        answer:
+          'TrendEvo uses reasonable technical and organizational security measures to protect user information from unauthorized access, misuse, or disclosure.',
+      },
+      {
+        question:
+          'What should I do if I think my TrendEvo account has been accessed without permission?',
+        answer:
+          'Change your password immediately and contact TrendEvo customer support so the team can review the suspicious activity.',
+      },
+    ],
   },
 };

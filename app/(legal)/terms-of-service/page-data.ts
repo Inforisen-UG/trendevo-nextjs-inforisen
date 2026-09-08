@@ -13,22 +13,6 @@ type LegalPageHero = {
   lastUpdated: string;
 };
 
-const defaultFaqAnswer =
-  'TrendEvo provides fast, secure SMM services with transparent pricing, multiple payment options, and 24/7 support to help you grow across all major social platforms.';
-
-const defaultFaqItems = [
-  'What is an SMM panel and how does TrendEvo work?',
-  'How fast will my order be delivered?',
-  'Are the followers and engagement real?',
-  'What payment methods do you accept?',
-  'Do you offer reseller or API access?',
-  'Is my account information safe?',
-  'What happens if an order drops?',
-  'How can I contact support?',
-  'Can I place bulk orders?',
-  'Do you offer refunds?',
-].map((question) => ({ question, answer: defaultFaqAnswer }));
-
 type TermsOfServicePageData = {
   seo: SEO;
   hero: LegalPageHero;
@@ -55,8 +39,52 @@ export const data: TermsOfServicePageData = {
     label: 'FAQ',
     title: 'gt<Frequently> Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Answers to common questions about using TrendEvo under our Terms of Service, including accounts, orders, and prohibited activity.',
     bg: 'section-7',
-    items: defaultFaqItems,
+    items: [
+      {
+        question: 'Who is eligible to create and use a TrendEvo account?',
+        answer:
+          'Anyone who meets TrendEvo’s account requirements and agrees to the Terms of Service may create and use an account. Users must provide accurate information and use the platform responsibly.',
+      },
+      {
+        question:
+          'Am I responsible for entering the correct link or username when placing an order?',
+        answer:
+          'Yes. You are responsible for providing the correct profile, post, page, or channel link. TrendEvo may not be able to reverse or refund an order submitted with incorrect information.',
+      },
+      {
+        question: 'Can I use TrendEvo services for my clients or as a reseller?',
+        answer:
+          'Yes. Agencies, freelancers, and resellers may use TrendEvo services for their clients as long as they follow the Terms of Service and applicable platform rules.',
+      },
+      {
+        question: 'What activities are prohibited when using TrendEvo?',
+        answer:
+          'You must not use TrendEvo for illegal, fraudulent, abusive, deceptive, or harmful activities. Misuse of the platform may result in account restrictions or termination.',
+      },
+      {
+        question: 'Can TrendEvo suspend or terminate my account?',
+        answer:
+          'Yes. TrendEvo may suspend or terminate accounts that violate the Terms of Service, misuse services, or engage in suspicious or prohibited activity.',
+      },
+      {
+        question: 'What happens to my balance if my account is terminated?',
+        answer:
+          'Any remaining balance will be handled according to TrendEvo’s Terms of Service and the reason for the account termination.',
+      },
+      {
+        question:
+          'Does TrendEvo guarantee specific social media growth or business results?',
+        answer:
+          'No. TrendEvo provides social media marketing services but does not guarantee sales, revenue, engagement, rankings, or long-term organic growth.',
+      },
+      {
+        question:
+          'What happens if a social media platform changes its rules or algorithms?',
+        answer:
+          'Social media platforms can change their policies, algorithms, and systems at any time. TrendEvo cannot control or guarantee results affected by those external changes.',
+      },
+    ],
   },
 };

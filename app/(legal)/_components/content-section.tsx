@@ -57,7 +57,7 @@ export default function TermsContentSection() {
           needs to be covered legally. Please read this before creating an
           account or placing your first order. If something is unclear, contact
           us through our{' '}
-          <Link href="/#contact" className={legalLinkClassName}>
+          <Link href="/contact-us" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page before you proceed. Our team is available 24 hours a day in
@@ -162,7 +162,7 @@ export default function TermsContentSection() {
             from SMMSun and asks for your account password or any social media
             password, do not share it and report the contact to us immediately
             through our{' '}
-            <Link href="/#contact" className={legalLinkClassName}>
+            <Link href="/contact-us" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page.
@@ -434,7 +434,7 @@ export default function TermsContentSection() {
             If your account is suspended due to a suspected error or
             misunderstanding, contact our support team through the{' '}
             <Link
-              href="/#contact"
+              href="/contact-us"
               className={cn(legalLinkClassName, 'underline hover:opacity-80')}
             >
               Contact Us
@@ -482,7 +482,7 @@ export default function TermsContentSection() {
             any dispute. The vast majority of issues are resolved quickly
             through our support team without any need for formal proceedings.
             You can reach us at any time through our{' '}
-            <Link href="/#contact" className={legalLinkClassName}>
+            <Link href="/contact-us" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page.

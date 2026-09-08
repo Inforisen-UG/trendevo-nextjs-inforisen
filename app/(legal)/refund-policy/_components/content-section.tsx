@@ -191,7 +191,7 @@ const refundSteps: StepperStep[] = [
       <>
         <p>
           Reach out to our support team via WhatsApp or through the{' '}
-          <Link href="/#contact" className={legalLinkClassName}>
+          <Link href="/contact-us" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page. Include the following information in your message so we can
@@ -263,7 +263,7 @@ export default async function ContentSection() {
           <p className={legalSmallTextClassName}>
             If you have questions about anything on this page, our support team
             is available 24/7 via WhatsApp and email. You can also visit our{' '}
-            <Link href="/#contact" className={legalLinkClassName}>
+            <Link href="/contact-us" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page to reach us directly.

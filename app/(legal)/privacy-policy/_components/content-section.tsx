@@ -33,7 +33,7 @@ export default async function ContentSection() {
           you deserve to actually understand this document, not just scroll past
           it. If you have questions about anything on this page, you can reach us
           any time through our{' '}
-          <Link href="/#contact" className={legalLinkClassName}>
+          <Link href="/contact-us" className={legalLinkClassName}>
             Contact Us
           </Link>{' '}
           page. Our support team responds in Bangla and English, 24 hours a day.
@@ -88,7 +88,7 @@ export default async function ContentSection() {
             internationally. You can learn more about who we are and how our
             platform works on our About Us page. For any privacy-related
             questions or requests, you can contact us directly through our{' '}
-            <Link href="/#contact" className={legalLinkClassName}>
+            <Link href="/contact-us" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page or via WhatsApp as listed there.
@@ -342,7 +342,7 @@ export default async function ContentSection() {
             risk. If you ever suspect that your SMMSun account has been accessed
             without your authorisation, contact our support team immediately
             through our{' '}
-            <Link href="/#contact" className={legalLinkClassName}>
+            <Link href="/contact-us" className={legalLinkClassName}>
               Contact Us
             </Link>{' '}
             page so we can investigate and help secure your account.
@@ -382,7 +382,7 @@ export default async function ContentSection() {
                   You have the right to request a summary of the personal data
                   SMMSun holds about you. To make this request, contact us
                   through our{' '}
-                  <Link href="/#contact" className={legalLinkClassName}>
+                  <Link href="/contact-us" className={legalLinkClassName}>
                     Contact Us
                   </Link>{' '}
                   page with your registered email address and we will respond
@@ -410,7 +410,7 @@ export default async function ContentSection() {
                   requests subject to any legal obligations that require us to
                   retain certain records, such as financial transaction history.
                   To request account deletion, contact us through our{' '}
-                  <Link href="/#contact" className={legalLinkClassName}>
+                  <Link href="/contact-us" className={legalLinkClassName}>
                     Contact Us
                   </Link>{' '}
                   page.

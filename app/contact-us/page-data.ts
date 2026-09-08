@@ -111,7 +111,7 @@ export const data: ContactUsPageData = {
         title: 'WhatsApp Us',
         description:
           'Would you prefer a quick chat? Send us a message on WhatsApp for prompt assistance.',
-        detailValue: '+880 0000 000 000',
+        detailValue: '+880 1888 8887 7777',
         detailValueClassName:
           'font-semibold text-[#25d365] dark:text-[rgba(37,211,101,0.8)]',
         buttonLabel: 'Contact us on WhatsApp',

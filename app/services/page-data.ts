@@ -76,7 +76,7 @@ export const data: ServicesPageData = {
     titleClassName:
       'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]',
     description:
-      'TrendEvo provides reliable SMM panel services in Bangladesh for creators, businesses, agencies, freelancers, and resellers. From one simple dashboard, you can order social media growth services for lnk</facebook-smm-panel|Facebook>, lnk</instagram-smm-panel|Instagram>, lnk</youtube-smm-panel|YouTube>, lnk</tiktok-smm-panel|TikTok>, lnk</telegram-smm-panel|Telegram>, lnk</spotify-smm-panel|Spotify>, and more.',
+      'TrendEvo provides reliable lnk</|SMM panel services in Bangladesh> for creators, businesses, agencies, freelancers, and resellers. From one simple dashboard, you can order social media growth services for Facebook, Instagram, YouTube, TikTok, Telegram, Spotify, and more.',
     descriptionClassName:
       'max-w-[762px] text-lg font-medium leading-relaxed text-[#343e56]',
     primaryButtonLabel: 'Explore Our Services',

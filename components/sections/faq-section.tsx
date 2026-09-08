@@ -114,13 +114,14 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
       </>
     ),
     ctaButtonLabel = 'Get in Touch',
-    ctaButtonHref = '#contact',
+    ctaButtonHref = '/contact-us',
   } = data;
   const [leftColumn, rightColumn] = splitFaqColumns(items);
   const hasFaqItems = items.length > 0;
 
   return (
     <PrimarySection
+      id="faq"
       bg={bg ?? undefined}
       darkBg={darkBg ?? undefined}
       className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
