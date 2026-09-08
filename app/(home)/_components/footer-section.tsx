@@ -9,7 +9,7 @@ const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about-us' },
   { label: 'Our Services', href: '/services' },
-  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'How It Works', href: '/how-it-works' },
   { label: 'Read Our Blog', href: '/blog' },
   { label: 'Pricing', href: '/services/pricing' },
 ];
@@ -32,7 +32,7 @@ const companyLinks = [
   { label: 'Terms Of Services', href: '/terms-of-service' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Refund Policy', href: '/refund-policy' },
-  { label: 'FAQs', href: '/#faq' },
+  { label: 'FAQs', href: '/faq' },
   { label: 'Contact Us', href: '/contact-us' },
 ];
 
