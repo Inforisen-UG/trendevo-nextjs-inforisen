@@ -115,7 +115,7 @@ export default function SiteHeader({ className }: { className?: string }) {
       )}
     >
       <div className="container flex h-[80px] items-center justify-between">
-        <Link href="/" className="relative h-[42px] w-[132px] shrink-0">
+        <Link href="/" className="relative h-14 w-[176px] shrink-0 sm:h-16 sm:w-[200px]">
           <Image
             src="/images/icons/site-logo.png"
             alt="TrendEvo"
