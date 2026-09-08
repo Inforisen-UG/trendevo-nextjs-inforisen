@@ -272,7 +272,7 @@ function HeroIllustrationBlock({
             sizes={`(max-width: 1024px) 100vw, ${illustration.width}px`}
           />
         </div>
-        {socialBar}
+        {socialBar} 
       </div>
     );
   }
