@@ -365,14 +365,14 @@ export default function HeroSection({
             <h1 className={cn(titleClassByVariant[variant], titleClassName)}>
               {title}
             </h1>
-            <p
+            <div
               className={cn(
                 descriptionClassByVariant[variant],
                 descriptionClassName,
               )}
             >
               {description}
-            </p>
+            </div>
           </div>
           {actions}
         </>
@@ -382,14 +382,14 @@ export default function HeroSection({
             <h1 className={cn(titleClassByVariant[variant], titleClassName)}>
               {title}
             </h1>
-            <p
+            <div
               className={cn(
                 descriptionClassByVariant[variant],
                 descriptionClassName,
               )}
             >
               {description}
-            </p>
+            </div>
           </div>
           {actions}
         </div>
@@ -399,14 +399,14 @@ export default function HeroSection({
             <h1 className={cn(titleClassByVariant[variant], titleClassName)}>
               {title}
             </h1>
-            <p
+            <div
               className={cn(
                 descriptionClassByVariant[variant],
                 descriptionClassName,
               )}
             >
               {description}
-            </p>
+            </div>
           </div>
           {actions}
         </div>
@@ -416,14 +416,14 @@ export default function HeroSection({
             <h1 className={cn(titleClassByVariant[variant], titleClassName)}>
               {title}
             </h1>
-            <p
+            <div
               className={cn(
                 descriptionClassByVariant[variant],
                 descriptionClassName,
               )}
             >
               {description}
-            </p>
+            </div>
           </div>
           {actions}
         </>
@@ -433,14 +433,14 @@ export default function HeroSection({
             <h1 className={cn(titleClassByVariant[variant], titleClassName)}>
               {title}
             </h1>
-            <p
+            <div
               className={cn(
                 descriptionClassByVariant[variant],
                 descriptionClassName,
               )}
             >
               {description}
-            </p>
+            </div>
             {promo}
           </div>
           {actions}
