@@ -11,8 +11,6 @@ import PricingSection from '@/app/(home)/_components/pricing-section';
 import { data as homePageData } from '@/app/(home)/page-data';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import WhyChooseUsSection from '@/app/(home)/_components/why-choose-us-section';
-import WorkingProcessSection from '@/app/(home)/_components/working-process-section';
-import FaqSection from '@/components/sections/faq-section';
 import OurService from '@/app/(home)/_components/our-service';
 import StatsSection from '@/app/(home)/_components/stats-section';
 import JsonLdScript from '@/components/seo/json-ld-script';
@@ -43,14 +41,12 @@ export default function Home() {
       </Suspense>
       <OurService />
       <AboutSection />
-      <WorkingProcessSection />
       <WhyChooseUsSection />
       <PaymentMethodsSection />
       <PlatformMarqueeSection />
       <AdvantagesSection />
       <PricingSection />
       <TestimonialsSection data={homePageData.testimonials} />
-      <FaqSection data={homePageData.faq} />
       <Suspense fallback={null}>
         <HomeBlog />
       </Suspense>
