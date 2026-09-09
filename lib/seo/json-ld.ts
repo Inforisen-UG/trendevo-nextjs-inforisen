@@ -1,4 +1,5 @@
 import type { BlogDetail } from '@/lib/blogs';
+import type { FaqItem } from '@/components/sections/faq-section';
 import { absoluteUrl, getSiteUrl } from '@/lib/site-url';
 
 export type JsonLd = Record<string, unknown>;
@@ -84,5 +85,45 @@ export function buildServiceProvider(): JsonLd {
     '@type': 'Organization',
     name: 'TrendEvo',
     url: getSiteUrl(),
+  };
+}
+
+export function buildFaqPageSchema(items: FaqItem[]): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer.replace(/lnk<[^|>]+\|([^>]+)>/g, '$1').replace(/gt<([^>]+)>/g, '$1'),
+      },
+    })),
+    url: absoluteUrl('/faq'),
+  };
+}
+
+type HowToStep = {
+  title: string;
+  description: string;
+};
+
+export function buildHowToSchema(
+  steps: Array<{ title: unknown; description: string }>,
+): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How TrendEvo Works',
+    description:
+      'Learn how TrendEvo works. Create an account, add funds, choose an SMM service, place your order, and track delivery from one simple dashboard.',
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: typeof step.title === 'string' ? step.title : `Step ${index + 1}`,
+      text: step.description,
+    })),
+    url: absoluteUrl('/how-it-works'),
   };
 }

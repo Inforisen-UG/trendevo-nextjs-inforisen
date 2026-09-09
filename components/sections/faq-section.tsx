@@ -30,6 +30,9 @@ export type FaqSectionData = {
   bg?: SectionBgKey | null;
   darkBg?: SectionDarkBgKey | null;
   className?: string;
+  sectionId?: string;
+  showDecorations?: boolean;
+  showCta?: boolean;
   ctaTitle?: string;
   ctaSubtitle?: ReactNode;
   ctaButtonLabel?: string;
@@ -106,6 +109,9 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
     bg = 'section-7',
     darkBg = 'section-21-dark',
     className,
+    sectionId = 'faq',
+    showDecorations = true,
+    showCta = true,
     ctaTitle = 'Still have questions?',
     ctaSubtitle = (
       <>
@@ -121,12 +127,15 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
 
   return (
     <PrimarySection
-      id="faq"
+      id={sectionId}
       bg={bg ?? undefined}
       darkBg={darkBg ?? undefined}
-      className={cn('overflow-hidden py-12 sm:py-16 lg:py-20', className)}
+      className={cn(
+        'scroll-mt-28 overflow-hidden py-12 sm:py-16 lg:py-20',
+        className,
+      )}
     >
-      <FaqSectionDecorations />
+      {showDecorations ? <FaqSectionDecorations /> : null}
 
       <div className="container relative z-10 flex flex-col gap-8 sm:gap-12">
         <SectionHeading
@@ -146,41 +155,43 @@ export default function FaqSection({ data = {} }: FaqSectionProps) {
           </div>
         ) : null}
 
-        <div
-          className={cn(
-            'mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
-            'bg-[linear-gradient(119.56deg,rgb(255,255,255)_3.42%,rgb(255,243,253)_55.68%,rgb(255,255,255)_107.93%)]',
-            'dark:border-[#8a22c8]/60 dark:bg-[#260d35] dark:bg-none',
-          )}
-        >
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-1">
-                <Image
-                  src="/images/faq/faq-cta-question-dice-decoration.webp"
-                  alt="Decorative FAQ call-to-action dice illustration"
-                  width={36}
-                  height={34}
-                  className="size-9 rotate-[-20deg] object-contain"
-                />
-                <h3 className="text-gradient text-sm font-medium sm:text-base">
-                  {ctaTitle}
-                </h3>
+        {showCta ? (
+          <div
+            className={cn(
+              'mx-auto w-full max-w-4xl rounded-[14px] border border-[#d181ff]/60 px-4 py-4 sm:px-7 sm:py-[22px]',
+              'bg-[linear-gradient(119.56deg,rgb(255,255,255)_3.42%,rgb(255,243,253)_55.68%,rgb(255,255,255)_107.93%)]',
+              'dark:border-[#8a22c8]/60 dark:bg-[#260d35] dark:bg-none',
+            )}
+          >
+            <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-1">
+                  <Image
+                    src="/images/faq/faq-cta-question-dice-decoration.webp"
+                    alt="Decorative FAQ call-to-action dice illustration"
+                    width={36}
+                    height={34}
+                    className="size-9 rotate-[-20deg] object-contain"
+                  />
+                  <h3 className="text-gradient text-sm font-medium sm:text-base">
+                    {ctaTitle}
+                  </h3>
+                </div>
+                <p className="text-sm leading-relaxed text-[#071431] sm:text-base dark:text-white">
+                  {typeof ctaSubtitle === 'string'
+                    ? renderText(ctaSubtitle)
+                    : ctaSubtitle}
+                </p>
               </div>
-              <p className="text-sm leading-relaxed text-[#071431] sm:text-base dark:text-white">
-                {typeof ctaSubtitle === 'string'
-                  ? renderText(ctaSubtitle)
-                  : ctaSubtitle}
-              </p>
+              <PrimaryButton
+                href={ctaButtonHref}
+                className="w-full shrink-0 rounded-xl border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] sm:w-auto"
+              >
+                {ctaButtonLabel}
+              </PrimaryButton>
             </div>
-            <PrimaryButton
-              href={ctaButtonHref}
-              className="w-full shrink-0 rounded-xl border-0 shadow-[inset_0_2px_8px_rgba(255,255,255,0.12)] sm:w-auto"
-            >
-              {ctaButtonLabel}
-            </PrimaryButton>
           </div>
-        </div>
+        ) : null}
       </div>
     </PrimarySection>
   );

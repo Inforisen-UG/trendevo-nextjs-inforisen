@@ -13,7 +13,7 @@ export default function FaqCtaSection() {
       buttonsOutlet={
         <>
           <PrimaryButton
-            href="/contact-us"
+            href={cta.primaryButtonHref}
             className="border-[1.5px] border-[#cc7aff]"
           >
             {cta.primaryButtonLabel}

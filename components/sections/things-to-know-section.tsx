@@ -49,7 +49,7 @@ export default function ThingsToKnowSection({ data }: ThingsToKnowSectionProps) 
 
           <div className="flex flex-col gap-4 text-base leading-relaxed text-[#404a60] sm:text-lg dark:text-[#c1c4cc]">
             {data.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              <p key={paragraph.slice(0, 48)}>{renderText(paragraph)}</p>
             ))}
           </div>
 

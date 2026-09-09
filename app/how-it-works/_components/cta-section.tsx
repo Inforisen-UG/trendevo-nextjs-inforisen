@@ -4,9 +4,9 @@ import SecondaryButton from '@/components/buttons/secondary-button';
 import { data } from '@/app/how-it-works/page-data';
 import { signUpUrl } from '@/lib/auth-urls';
 
-const { cta } = data;
-
 export default function HowItWorksCtaSection() {
+  const { cta } = data;
+
   return (
     <CtaSection
       title={cta.title}

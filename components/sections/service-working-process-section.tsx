@@ -37,6 +37,10 @@ export type ServiceWorkingProcessSectionProps = {
   stepHexDarkSrc?: string;
   flowConnectorsSrc?: string;
   titleBulletSrc?: string;
+  showFlowConnectors?: boolean;
+  showTitleBullet?: boolean;
+  centerOrphanStep?: boolean;
+  stepsGridClassName?: string;
 };
 
 const DEFAULT_STEP_HEX_SRC = '/images/service-smm-panel/facebook-smm-panel-working-process-step-hex-decoration.svg';
@@ -57,11 +61,13 @@ function ProcessStepCard({
   stepHexSrc,
   stepHexDarkSrc,
   titleBulletSrc,
+  showTitleBullet = true,
 }: ServiceWorkingProcessStep & {
   cardBg: CardBgKey;
   stepHexSrc: string;
   stepHexDarkSrc: string;
   titleBulletSrc: string;
+  showTitleBullet?: boolean;
 }) {
   return (
     <PrimaryCard
@@ -93,15 +99,17 @@ function ProcessStepCard({
         </div>
 
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <Image
-              src={titleBulletSrc}
-              alt="Section title bullet decoration"
-              aria-hidden
-              width={10}
-              height={10}
-              className="size-2.5 shrink-0"
-            />
+          <div className={cn('flex items-center', showTitleBullet ? 'gap-2' : '')}>
+            {showTitleBullet ? (
+              <Image
+                src={titleBulletSrc}
+                alt="Section title bullet decoration"
+                aria-hidden
+                width={10}
+                height={10}
+                className="size-2.5 shrink-0"
+              />
+            ) : null}
             <h3 className="text-lg font-semibold leading-normal tracking-[0.2px] text-[#232323] sm:text-xl dark:text-white">
               {title}
             </h3>
@@ -132,7 +140,17 @@ export default function ServiceWorkingProcessSection({
   stepHexDarkSrc = DEFAULT_STEP_HEX_DARK_SRC,
   flowConnectorsSrc = DEFAULT_FLOW_CONNECTORS_SRC,
   titleBulletSrc = DEFAULT_TITLE_BULLET_SRC,
+  showFlowConnectors = true,
+  showTitleBullet = true,
+  centerOrphanStep = false,
+  stepsGridClassName,
 }: ServiceWorkingProcessSectionProps) {
+  const orphanStepClasses =
+    centerOrphanStep && steps.length % 2 !== 0
+      ? '[&>*:last-child]:sm:col-span-2 [&>*:last-child]:sm:max-w-[calc(50%-0.75rem)] [&>*:last-child]:sm:justify-self-center xl:[&>*:last-child]:col-span-4 xl:[&>*:last-child]:max-w-[calc(25%-0.5625rem)] xl:[&>*:last-child]:justify-self-center'
+      : centerOrphanStep && steps.length % 4 !== 0
+        ? 'xl:[&>*:last-child]:col-span-4 xl:[&>*:last-child]:max-w-[calc(25%-0.5625rem)] xl:[&>*:last-child]:justify-self-center'
+        : undefined;
   return (
     <PrimarySection
       bg={bg}
@@ -160,7 +178,13 @@ export default function ServiceWorkingProcessSection({
         />
 
         <div className="flex flex-col items-center gap-3">
-          <div className="grid w-full gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
+          <div
+            className={cn(
+              'grid w-full gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6',
+              orphanStepClasses,
+              stepsGridClassName,
+            )}
+          >
             {steps.map((step) => (
               <ProcessStepCard
                 key={step.number}
@@ -169,19 +193,22 @@ export default function ServiceWorkingProcessSection({
                 stepHexSrc={stepHexSrc}
                 stepHexDarkSrc={stepHexDarkSrc}
                 titleBulletSrc={titleBulletSrc}
+                showTitleBullet={showTitleBullet}
               />
             ))}
           </div>
 
-          <Image
-            src={flowConnectorsSrc}
-            alt="Decorative working process flow connectors"
-            aria-hidden
-            width={1123}
-            height={74}
-            className="hidden h-auto w-full max-w-[1123px] xl:block"
-            unoptimized
-          />
+          {showFlowConnectors ? (
+            <Image
+              src={flowConnectorsSrc}
+              alt="Decorative working process flow connectors"
+              aria-hidden
+              width={1123}
+              height={74}
+              className="hidden h-auto w-full max-w-[1123px] xl:block"
+              unoptimized
+            />
+          ) : null}
         </div>
       </div>
     </PrimarySection>
