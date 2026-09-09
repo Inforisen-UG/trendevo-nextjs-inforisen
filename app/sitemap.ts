@@ -21,6 +21,8 @@ const STATIC_ROUTES: StaticSitemapEntry[] = [
   { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/services/pricing', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/about-us', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/how-it-works', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/faq', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/blog', changeFrequency: 'daily', priority: 0.8 },
 
