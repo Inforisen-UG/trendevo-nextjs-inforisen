@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import type { PricingPlatform } from './platform-data';
+import WebsiteTrafficPlatformIcon from '@/components/icons/website-traffic-platform-icon';
 
 const ACTIVE_TAB_BG =
   'linear-gradient(102.9deg, rgb(209, 129, 255) 2.85%, rgb(255, 99, 190) 90.53%)';
@@ -11,34 +12,7 @@ const INACTIVE_TAB_BG =
   'linear-gradient(111.82deg, rgba(214, 144, 255, 0.08) 4.77%, rgba(215, 148, 255, 0.08) 39.51%, rgba(179, 100, 226, 0.08) 74.24%)';
 
 function WebsiteTrafficIcon() {
-  return (
-    <div className="relative h-[17px] w-[20.621px] shrink-0">
-      <Image
-        src="/images/our-services/platforms/website-traffic-platform-icon-layer-5.svg"
-        alt="Website traffic platform icon layer"
-        aria-hidden
-        fill
-        className="object-contain"
-        unoptimized
-      />
-      <Image
-        src="/images/our-services/platforms/website-traffic-platform-icon-layer-7.svg"
-        alt="Website traffic platform icon overlay"
-        aria-hidden
-        fill
-        className="object-contain mix-blend-overlay"
-        unoptimized
-      />
-      <Image
-        src="/images/our-services/platforms/website-traffic-platform-icon-layer-8.svg"
-        alt="Website traffic platform icon highlight"
-        aria-hidden
-        fill
-        className="object-contain mix-blend-overlay"
-        unoptimized
-      />
-    </div>
-  );
+  return <WebsiteTrafficPlatformIcon />;
 }
 
 function PlatformIcon({

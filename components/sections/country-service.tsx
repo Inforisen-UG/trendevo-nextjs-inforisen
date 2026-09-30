@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import PrimaryButton from '@/components/buttons/primary-button';
+import WebsiteTrafficPlatformIcon from '@/components/icons/website-traffic-platform-icon';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
@@ -118,17 +119,32 @@ function ServiceBottomLeftDecoration({ imageSrc }: { imageSrc: string }) {
 }
 
 function PlatformIcon({
+  platformId,
   src,
   label,
   className,
   isActive,
 }: {
+  platformId: string;
   src: string;
   label: string;
   className?: string;
   isActive?: boolean;
 }) {
   const isSvg = src.endsWith('.svg');
+
+  if (platformId === 'website-traffic') {
+    return (
+      <div className="relative flex size-8 shrink-0 items-center justify-center p-1.5 sm:size-[38px] sm:p-[9px]">
+        <HexBgIcon
+          isActive={isActive}
+          className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]"
+        />
+        <WebsiteTrafficPlatformIcon className="relative z-10" />
+        <span className="sr-only">{label}</span>
+      </div>
+    );
+  }
 
   return (
     <div className="relative flex size-8 shrink-0 items-center justify-center p-1.5 sm:size-[38px] sm:p-[9px]">
@@ -308,6 +324,7 @@ function PlatformTab({
     >
       <div className="flex w-full items-center justify-center gap-0 sm:gap-2">
         <PlatformIcon
+          platformId={platform.id}
           src={platform.icon}
           label={platform.label}
           className={platform.iconClassName}

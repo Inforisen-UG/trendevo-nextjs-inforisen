@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import type { BlogPost } from '@/app/blog/_components/blog-post-card';
 import { apiFetch } from '@/lib/api-fetch';
 
@@ -572,42 +574,84 @@ export async function getAllBlogsForSitemap(
   return entries;
 }
 
+const BLOGS_LIST_PAGE_SIZE = 100;
+
+/**
+ * The public blogs API ignores `?author=`; collect posts by scanning list pages.
+ */
+const getBlogItemsByAuthorSlug = cache(
+  async (authorSlug: string): Promise<BlogApiItem[]> => {
+    const apiBase = process.env.NEXT_PUBLIC_API_URL;
+
+    if (!apiBase || !authorSlug) {
+      return [];
+    }
+
+    const matches: BlogApiItem[] = [];
+    let page = 1;
+    let lastPage = 1;
+
+    try {
+      do {
+        const response = await apiFetch(
+          `${apiBase}/blogs?per_page=${BLOGS_LIST_PAGE_SIZE}&page=${page}`,
+          { next: { revalidate: 60 } },
+        );
+
+        if (!response.ok) {
+          break;
+        }
+
+        const json = (await response.json()) as BlogsApiResponse;
+
+        if (!Array.isArray(json.data)) {
+          break;
+        }
+
+        for (const item of json.data) {
+          const slug = item.relationships?.author?.attributes?.slug;
+          if (slug === authorSlug) {
+            matches.push(item);
+          }
+        }
+
+        lastPage = Math.max(json.meta?.last_page ?? 1, 1);
+        page += 1;
+      } while (page <= lastPage);
+    } catch {
+      return matches;
+    }
+
+    return matches;
+  },
+);
+
 export async function getAuthorPage(
   authorSlug: string,
   page = 1,
   perPage = 25,
 ): Promise<AuthorPageResult | null> {
-  const apiBase = process.env.NEXT_PUBLIC_API_URL;
-
-  if (!apiBase || !authorSlug) {
+  if (!authorSlug) {
     return null;
   }
 
   try {
-    const response = await apiFetch(
-      `${apiBase}/blogs?author=${encodeURIComponent(authorSlug)}&per_page=${perPage}&page=${page}`,
-      { next: { revalidate: 60 } },
-    );
+    const allItems = await getBlogItemsByAuthorSlug(authorSlug);
 
-    if (!response.ok) {
+    if (allItems.length === 0) {
       return null;
     }
 
-    const json = (await response.json()) as BlogsApiResponse;
+    const totalPages = Math.max(Math.ceil(allItems.length / perPage), 1);
+    const activePage = Math.min(Math.max(page, 1), totalPages);
+    const start = (activePage - 1) * perPage;
+    const pageItems = allItems.slice(start, start + perPage);
 
-    if (!Array.isArray(json.data) || json.data.length === 0) {
-      return null;
-    }
-
-    const firstAuthor = json.data[0].relationships.author.attributes;
-
-    if (firstAuthor.slug !== authorSlug) {
-      return null;
-    }
+    const firstAuthor = allItems[0].relationships.author.attributes;
 
     let bio = firstAuthor.bio ?? '';
     let socialLinks = normalizeAuthorSocialLinks(firstAuthor.socialLinks);
-    const firstPostSlug = json.data[0].attributes.slug;
+    const firstPostSlug = allItems[0].attributes.slug;
     const firstPostDetail = await getBlogBySlug(firstPostSlug);
 
     if (firstPostDetail && firstPostDetail.author.slug === authorSlug) {
@@ -621,9 +665,9 @@ export async function getAuthorPage(
 
     return {
       author: mapAuthorAttributes(firstAuthor, bio, socialLinks),
-      posts: json.data.map(mapBlogItemToPost),
-      currentPage: json.meta?.current_page ?? page,
-      totalPages: Math.max(json.meta?.last_page ?? 1, 1),
+      posts: pageItems.map(mapBlogItemToPost),
+      currentPage: activePage,
+      totalPages,
     };
   } catch {
     return null;
