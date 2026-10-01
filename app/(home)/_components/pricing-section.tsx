@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import { data } from '@/app/(home)/page-data';
 import type { HomePricingPlan } from '@/app/(home)/page-data';
+import WebsiteTrafficPlatformIcon from '@/components/icons/website-traffic-platform-icon';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
@@ -45,16 +46,20 @@ function HexBgIcon({ className }: { className?: string }) {
 }
 
 function PlatformTab({
+  platformId,
   label,
   icon,
   isActive,
   onClick,
 }: {
+  platformId: string;
   label: string;
   icon: string;
   isActive: boolean;
   onClick: () => void;
 }) {
+  const isSvg = icon.endsWith('.svg');
+
   return (
     <button
       type="button"
@@ -71,14 +76,19 @@ function PlatformTab({
       <span className="flex w-full items-center justify-center gap-0 sm:gap-2">
         <span className="relative flex size-8 shrink-0 items-center justify-center p-1.5 sm:size-[38px] sm:p-[9px]">
           <HexBgIcon className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 sm:size-[38px]" />
-          <Image
-            src={icon}
+          {platformId === 'website-traffic' ? (
+            <WebsiteTrafficPlatformIcon className="relative z-10" />
+          ) : (
+            <Image
+              src={icon}
               alt={`${label} service icon`}
-            aria-hidden
-            width={20}
-            height={20}
-            className="relative z-10 size-4 object-contain sm:size-5"
-          />
+              aria-hidden
+              width={20}
+              height={20}
+              className="relative z-10 size-4 object-contain sm:size-5"
+              unoptimized={isSvg}
+            />
+          )}
           <span className="sr-only">{label}</span>
         </span>
         <span
@@ -199,6 +209,7 @@ export default function PricingSection() {
             {homePricingPlatforms.map((platform) => (
               <PlatformTab
                 key={platform.id}
+                platformId={platform.id}
                 label={platform.label}
                 icon={platform.icon}
                 isActive={activePlatformId === platform.id}
