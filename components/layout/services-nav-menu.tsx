@@ -173,8 +173,18 @@ export function ServicesNavDropdown({
       }
     };
 
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+
     document.addEventListener('mousedown', onPointerDown);
-    return () => document.removeEventListener('mousedown', onPointerDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', onPointerDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
   }, [open]);
 
   return (
@@ -188,23 +198,32 @@ export function ServicesNavDropdown({
         type="button"
         aria-expanded={open}
         aria-haspopup="true"
-        onClick={() => setOpen((value) => !value)}
-        className={cn(
-          'inline-flex items-center gap-1 text-base font-medium transition-colors',
-          isActive
-            ? 'text-gradient font-semibold'
-            : 'text-[#343e56] hover:text-[#071431] dark:text-white dark:hover:text-white/90',
-        )}
+        onClick={() => setOpen(true)}
+        className="group inline-flex items-center gap-1 text-base font-medium transition-colors"
       >
-        Services
+        <span
+          className={cn(
+            isActive
+              ? 'text-gradient font-semibold'
+              : 'text-[#343e56] group-hover:text-[#071431] dark:text-white dark:group-hover:text-white/90',
+          )}
+        >
+          Services
+        </span>
         <ChevronDown
-          className={cn('size-4 transition-transform', open && 'rotate-180')}
+          className={cn(
+            'size-4 shrink-0 transition-transform',
+            open && 'rotate-180',
+            isActive
+              ? 'text-[#ad26ff] dark:text-[#cb7ef7]'
+              : 'text-[#343e56] group-hover:text-[#071431] dark:text-white dark:group-hover:text-white/90',
+          )}
           strokeWidth={2}
         />
       </button>
 
       {open ? (
-        <div className="absolute top-full left-0 z-50 pt-3">
+        <div className="absolute top-full left-0 z-[100] pt-3">
           <div className="flex overflow-hidden rounded-xl border border-[#f0d8ff]/80 bg-white shadow-[0_16px_40px_rgba(143,42,205,0.12)] dark:border-white/10 dark:bg-[#1a0f22] dark:shadow-[0_16px_40px_rgba(0,0,0,0.45)]">
             <ServicesCategoryList
               activeGroupId={activeGroupId}

@@ -107,7 +107,7 @@ export default function SiteHeader({ className }: { className?: string }) {
   return (
     <header
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300',
+        'fixed top-0 right-0 left-0 z-50 w-full overflow-visible transition-all duration-300',
         showHeaderBg
           ? 'border-b border-white/30 bg-white/50 backdrop-blur-xl dark:border-white/10 dark:bg-[#0d0611]/70'
           : 'border-b border-transparent bg-transparent backdrop-blur-none',
@@ -125,7 +125,7 @@ export default function SiteHeader({ className }: { className?: string }) {
           />
         </Link>
 
-        <nav className="hidden min-[1100px]:flex items-center gap-8">
+        <nav className="hidden min-[1100px]:flex items-center gap-8 overflow-visible">
           <Link
             href="/"
             className={cn(
