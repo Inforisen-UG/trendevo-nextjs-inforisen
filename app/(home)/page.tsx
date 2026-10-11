@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import AboutSection from '@/app/(home)/_components/about-section';
 import AdvantagesSection from '@/app/(home)/_components/advantages-section';
 import CtaSection from '@/app/(home)/_components/cta-section';
+import AiResourcesSection from '@/components/sections/ai-resources-section';
 import HeroSection from '@/app/(home)/_components/hero-section';
 import HomeBlog from '@/app/(home)/_components/home-blog';
 import PaymentMethodsSection from '@/app/(home)/_components/payment-methods-section';
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
   description: homePageData.seo.description,
   alternates: {
     canonical: homePageData.seo.canonical,
+    types: {
+      'text/markdown': '/index.md',
+    },
   },
 };
 
@@ -51,6 +55,7 @@ export default function Home() {
         <HomeBlog />
       </Suspense>
       <CtaSection />
+      <AiResourcesSection />
     </>
   );
 }

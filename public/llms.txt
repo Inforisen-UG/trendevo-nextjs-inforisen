@@ -1,0 +1,83 @@
+# TrendEvo
+
+> A Bangladesh-focused SMM panel for affordable social media engagement services. TrendEvo offers followers, likes, views, comments, subscribers, members, shares, and related services for Facebook, Instagram, YouTube, TikTok, Telegram, X (Twitter), and more. Customers in Bangladesh can add funds using local payment methods including bKash, Nagad, and Rocket.
+
+TrendEvo is a social media marketing (SMM) panel serving businesses, freelancers, content creators, digital marketing agencies, and resellers, with a focus on the Bangladeshi market. Users can select social media engagement services, enter the relevant public profile or post link, choose a quantity, place an order, and track its progress through a single dashboard. Standard link-based orders do not require a social media account password. Available services, pricing, minimum quantities, estimated start times, and refill eligibility depend on the selected package.
+
+The platform promotes simple ordering, bulk-order support, and 24/7 customer assistance in Bangla and English. Its main advertised local payment options are bKash, Nagad, and Rocket; other payment logos appear on the website, but their live availability should be checked in the account dashboard. TrendEvo's public pages show some prices in USD. Users should check the displayed amount and payment options before adding funds or placing an order. Help is available through WhatsApp and email.
+
+## Key Pages
+
+- [Home](https://trendevo.com/): Overview of TrendEvo, supported platforms, benefits, payment methods, and featured services
+- [Services](https://trendevo.com/services): Overview of available SMM service categories and supported social media platforms
+- [Services & Pricing](https://trendevo.com/services/pricing): Public service categories, example rates, quantity limits, and delivery information
+- [About Us](https://trendevo.com/about-us): Company introduction and information about the panel
+- [How It Works](https://trendevo.com/how-it-works): Step-by-step guide to creating an account, adding funds, selecting a service, ordering, and tracking results
+- [Contact Us](https://trendevo.com/contact-us): WhatsApp, email, business hours, and support contact details
+- [Blog](https://trendevo.com/blog): Guides about social media marketing, SMM panels, ordering services, and growth strategies
+- [FAQ](https://trendevo.com/faq): Questions about accounts, services, payments, order tracking, security, reselling, and refills
+- [Terms of Service](https://trendevo.com/terms-of-service): Rules and conditions presented for service use and order placement
+- [Privacy Policy](https://trendevo.com/privacy-policy): Published information about data collection, accounts, and privacy
+- [Refund Policy](https://trendevo.com/refund-policy): Published refund, credit, and service-related policy information
+
+## Platform-Specific Service Pages
+
+- [Facebook SMM Panel](https://trendevo.com/facebook-smm-panel): Facebook followers, page likes, comments, reactions, shares, and video views
+- [Instagram SMM Panel](https://trendevo.com/instagram-smm-panel): Instagram followers, likes, comments, views, stories, and post engagement
+- [YouTube SMM Panel](https://trendevo.com/youtube-smm-panel): YouTube subscribers, video views, likes, comments, and watch-time services
+- [TikTok SMM Panel](https://trendevo.com/tiktok-smm-panel): TikTok followers, video likes, views, and engagement services
+- [X (Twitter) SMM Panel](https://trendevo.com/x-twitter-smm-panel): X followers, likes, views, reposts, and engagement
+- [Telegram SMM Panel](https://trendevo.com/telegram-smm-panel): Telegram group members, channel subscribers, post views, and reactions
+- [Spotify SMM Panel](https://trendevo.com/spotify-smm-panel): Spotify plays, followers, and monthly listeners
+- [SoundCloud SMM Panel](https://trendevo.com/soundcloud-smm-panel): SoundCloud plays, followers, and music engagement
+- [Twitch SMM Panel](https://trendevo.com/twitch-smm-panel): Twitch followers and live-stream viewers
+- [Snapchat SMM Panel](https://trendevo.com/snapchat-smm-panel): Snapchat followers, story and Spotlight views, and engagement
+
+## Popular Service Pages (Direct Buy Links)
+
+- [Buy Facebook Followers](https://trendevo.com/buy-facebook-followers)
+- [Buy Facebook Page Likes](https://trendevo.com/buy-facebook-page-likes)
+- [Buy Facebook Comments](https://trendevo.com/buy-facebook-comments)
+- [Buy Instagram Followers](https://trendevo.com/buy-instagram-followers)
+- [Buy Instagram Likes](https://trendevo.com/buy-instagram-likes)
+- [Buy Instagram Comments](https://trendevo.com/buy-instagram-comments)
+- [Buy Instagram Views](https://trendevo.com/buy-instagram-views)
+- [Buy Instagram Story Views](https://trendevo.com/buy-instagram-story-views)
+- [Buy Instagram Shares](https://trendevo.com/buy-instagram-shares)
+- [Buy YouTube Subscribers](https://trendevo.com/buy-youtube-subscribers)
+- [Buy YouTube Views](https://trendevo.com/buy-youtube-views)
+- [Buy YouTube Likes](https://trendevo.com/buy-youtube-likes)
+- [Buy YouTube Comments](https://trendevo.com/buy-youtube-comments)
+- [Buy TikTok Followers](https://trendevo.com/buy-tiktok-followers)
+- [Buy TikTok Likes](https://trendevo.com/buy-tiktok-likes)
+- [Buy TikTok Views](https://trendevo.com/buy-tiktok-views)
+- [Buy Telegram Members](https://trendevo.com/buy-telegram-members)
+- [Buy Spotify Plays](https://trendevo.com/buy-spotify-plays)
+- [Buy Spotify Monthly Listeners](https://trendevo.com/buy-spotify-monthly-listeners)
+- [Buy SoundCloud Plays](https://trendevo.com/buy-soundcloud-plays)
+- [Buy SoundCloud Followers](https://trendevo.com/buy-soundcloud-followers)
+
+## Panel & Account Access
+
+- [Sign In / Dashboard](https://my.trendevo.com/): Account access for managing funds, services, and order status
+- [Sign Up](https://my.trendevo.com/signup): Free registration to start ordering social media services
+
+## Key Facts
+
+- **Brand**: TrendEvo (also styled Trend Evo)
+- **Location**: Dhanmondi, Dhaka, Bangladesh
+- **Primary market**: Bangladesh; the panel addresses creators, businesses, freelancers, agencies, and resellers
+- **Supported platforms**: Facebook, Instagram, YouTube, TikTok, Telegram, X (Twitter), LinkedIn, Spotify, SoundCloud, Twitch, Snapchat, Discord, and website traffic
+- **Service types**: Followers, page likes, post likes, comments, video views, shares, reactions, subscribers, channel or group members, watch time, music plays, and other engagement services
+- **Main local payment methods**: bKash, Nagad, Rocket; Upay is also mentioned in website promotional copy
+- **Other payment options shown on the website**: Visa, Mastercard, Wise, Nexus Pay, and Bitcoin logos; confirm availability in the dashboard
+- **Pricing**: Service-dependent; public pages include USD-denominated examples, and local funding options are advertised
+- **Order process**: Sign up, add funds, select a service, provide the required public link and quantity, and track the order
+- **Account security**: Standard public-link service orders are described as not requiring social media passwords
+- **Bulk orders**: Supported for agency and reseller workflows
+- **Reseller API**: Referenced in the site's FAQ; confirm access and integration details with TrendEvo support
+- **Support**: Advertised as 24/7 in Bangla and English via WhatsApp and email
+- **WhatsApp**: +880 1888 8887 7777
+- **Email**: info@trendevo.com
+- **Official company founding date**: Not independently confirmed from the TrendEvo-specific pages reviewed
+- **User, order, and service totals**: Different figures appear across the website; no single total is stated here as a verified figure

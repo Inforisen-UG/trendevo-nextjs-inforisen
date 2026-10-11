@@ -48,6 +48,9 @@ export default function RootLayout({
         inter.variable,
       )}
     >
+      <head>
+        <link rel="llms-txt" href="/llms.txt" />
+      </head>
       <body className="min-h-full flex flex-col">
         <GoogleTagManagerNoscript />
         <GoogleTagManager />

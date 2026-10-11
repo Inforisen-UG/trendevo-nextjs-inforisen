@@ -15,7 +15,7 @@ type StaticSitemapEntry = {
  * All public App Router pages that are file-based (not CMS-driven).
  * Paths match each page's `seo.canonical` / route segment.
  */
-const STATIC_ROUTES: StaticSitemapEntry[] = [
+export const STATIC_ROUTES: StaticSitemapEntry[] = [
   // Core
   { path: '/', changeFrequency: 'daily', priority: 1 },
   { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
