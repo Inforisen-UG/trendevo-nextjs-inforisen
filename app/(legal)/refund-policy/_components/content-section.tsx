@@ -148,12 +148,12 @@ const negativeItems = [
     title: 'Account Balance Added via Payment Methods',
     description: (
       <p>
-        Funds added to your SMMSun account balance through bKash, Nagad, Rocket,
-        Visa, Mastercard, or any other payment method are non-refundable as cash
-        once deposited. Your balance remains in your account and can be used for
-        any current or future services on SMMSun. If you have an unused balance
-        and a genuine reason for requesting a withdrawal, contact our support
-        team and we will review your case individually.
+        Funds added to your Trendevo account balance through bKash, Nagad,
+        Rocket, Visa, Mastercard, or any other payment method are non-refundable
+        as cash once deposited. Your balance remains in your account and can be
+        used for any current or future services on Trendevo. If you have an
+        unused balance and a genuine reason for requesting a withdrawal, contact
+        our support team and we will review your case individually.
       </p>
     ),
   },
@@ -177,7 +177,7 @@ const refundSteps: StepperStep[] = [
     title: 'Check Your Order Status',
     description: (
       <p>
-        Log in to your SMMSun account and go to My Orders. Check the current
+        Log in to your Trendevo account and go to My Orders. Check the current
         status of your order. If it shows as completed but the service was not
         delivered, take a screenshot of both the order status and the relevant
         social media account showing the unchanged count.
@@ -198,7 +198,7 @@ const refundSteps: StepperStep[] = [
           process your request as quickly as possible.
         </p>
         <p>
-          Your SMMSun registered email address, your order ID (found in My
+          Your Trendevo registered email address, your order ID (found in My
           Orders), the service you ordered, the issue you experienced, and any
           screenshots that support your request.
         </p>
@@ -212,10 +212,11 @@ const refundSteps: StepperStep[] = [
       <p>
         Our team will review your request within 24 to 72 hours of receiving it.
         We may ask for additional information if needed. If your refund request
-        is approved, the amount will be credited to your SMMSun account balance.
-        We do not process refunds back to the original payment method such as
-        bKash or Nagad due to the nature of digital wallet transactions, but
-        your account credit can be used for any future order on the platform.
+        is approved, the amount will be credited to your Trendevo account
+        balance. We do not process refunds back to the original payment method
+        such as bKash or Nagad due to the nature of digital wallet transactions,
+        but your account credit can be used for any future order on the
+        platform.
       </p>
     ),
   },
@@ -225,7 +226,7 @@ const refundSteps: StepperStep[] = [
     description: (
       <p>
         Once your account is credited, the balance is available immediately for
-        any service on SMMSun. There is no expiry on account credits.
+        any service on Trendevo. There is no expiry on account credits.
       </p>
     ),
   },
@@ -248,7 +249,7 @@ export default async function ContentSection() {
           before, the refund policy is often the last thing you check before
           deciding whether to place that first order. So we are going to be
           completely straight with you here. This page explains exactly when
-          SMMSun offers refunds, when we do not, and what you should do if
+          Trendevo offers refunds, when we do not, and what you should do if
           something goes wrong with your order. No confusing legal language. No
           hidden clauses designed to avoid paying you back. Just a clear, honest
           explanation of how we handle money when things do not go as planned.
@@ -282,7 +283,7 @@ export default async function ContentSection() {
               way it is.
             </p>
             <p>
-              When you place an order on SMMSun, whether for followers, likes,
+              When you place an order on Trendevo, whether for followers, likes,
               views, or any other service, the delivery process begins almost
               immediately. In most cases, your order enters the queue within
               seconds of being placed and starts delivering within minutes. This
@@ -298,10 +299,10 @@ export default async function ContentSection() {
               occurred. They cannot be taken back.
             </p>
             <p>
-              This is not unique to SMMSun. It is how every legitimate SMM panel
-              in the world operates. We explain it here because we believe you
-              deserve to understand the nature of what you are purchasing before
-              you spend your money, not after.
+              This is not unique to Trendevo. It is how every legitimate SMM
+              panel in the world operates. We explain it here because we believe
+              you deserve to understand the nature of what you are purchasing
+              before you spend your money, not after.
             </p>
             <p>
               With that context in mind, here is exactly how our refund policy
@@ -312,7 +313,7 @@ export default async function ContentSection() {
 
         <AccentListSection
           title="When You Are Eligible for a Refund"
-          subtitle="SMMSun will process a refund or account credit in the following situations."
+          subtitle="Trendevo will process a refund or account credit in the following situations."
           items={positiveItems}
           variant="positive"
         />
@@ -330,7 +331,7 @@ export default async function ContentSection() {
           </h2>
           <div className={cn('space-y-4', legalBodyTextClassName)}>
             <p>
-              Many packages on SMMSun come with a refill guarantee. This is
+              Many packages on Trendevo come with a refill guarantee. This is
               separate from a refund and is an important feature to understand
               before choosing a package. <br /> <br /> A refill guarantee means
               that if your follower count, like count, or view count drops
@@ -338,7 +339,7 @@ export default async function ContentSection() {
               can request a free top-up to restore the count to the original
               delivered quantity. The refill period varies by package and is
               stated clearly in each package&apos;s description. <br /> <br />
-              To request a refill, go to My Orders in your SMMSun dashboard,
+              To request a refill, go to My Orders in your Trendevo dashboard,
               find the relevant order, and use the refill request option. Our
               team processes refill requests as quickly as possible, usually
               within 24 to 48 hours. <br /> <br /> Refill guarantees do not
@@ -370,18 +371,16 @@ export default async function ContentSection() {
               ticket to be closed. If you feel your case was not reviewed
               fairly, you can escalate it by replying to your original support
               conversation and asking for a senior review. We take customer
-              satisfaction seriously because SMMSun&apos;s reputation in
-              Bangladesh depends entirely on whether {usersAll.toLocaleString('en-US')} users trust us with
-              their money.
+              satisfaction seriously because Trendevo&apos;s reputation in
+              Bangladesh depends entirely on whether{' '}
+              {usersAll.toLocaleString('en-US')} users trust us with their
+              money.
             </p>
             <p>
               If a dispute cannot be resolved through our support process, it is
               subject to the laws and jurisdiction of Bangladesh. Please refer
               to our{' '}
-              <Link
-                href="/terms-of-service"
-                className={legalLinkClassName}
-              >
+              <Link href="/terms-of-service" className={legalLinkClassName}>
                 Terms of Service
               </Link>{' '}
               for full details on dispute resolution.
