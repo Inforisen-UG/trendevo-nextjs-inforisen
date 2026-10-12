@@ -12,13 +12,17 @@ import { data } from '@/app/(subservice)/buy-soundcloud-plays/page-data';
 import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 import { OrderFormQuantitySlider } from '@/components/subservice/order-form-quantity-slider';
+import {
+  formatSubserviceOrderTotal as formatCurrency,
+  getSubservicePricePerUnit,
+} from '@/lib/subservice-order-pricing';
 
 const { orderForm } = data;
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
 const QUANTITY_STEP = 100;
-const PRICE_PER_UNIT = 1.2;
+const PRICE_PER_UNIT = getSubservicePricePerUnit('buy-soundcloud-plays');
 
 const SOUNDCLOUD_ICON =
   '/images/platform-marquee/platform-marquee-soundcloud-platform-icon.svg';
@@ -49,9 +53,6 @@ function SoundCloudIcon({
   );
 }
 
-function formatCurrency(amount: number) {
-  return `$${amount.toFixed(2)}`;
-}
 
 function FormField({
   label,

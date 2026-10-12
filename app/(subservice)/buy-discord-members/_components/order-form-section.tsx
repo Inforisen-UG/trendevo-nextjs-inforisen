@@ -10,11 +10,15 @@ import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
 import { cn } from '@/lib/utils';
 import { OrderFormQuantitySlider } from '@/components/subservice/order-form-quantity-slider';
+import {
+  formatSubserviceOrderTotal as formatCurrency,
+  getSubservicePricePerUnit,
+} from '@/lib/subservice-order-pricing';
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
 const QUANTITY_STEP = 100;
-const PRICE_PER_UNIT = 1.2;
+const PRICE_PER_UNIT = getSubservicePricePerUnit('buy-discord-members');
 
 const DISCORD_ICON =
   '/images/platform-marquee/platform-marquee-discord-platform-icon.webp';
@@ -45,9 +49,6 @@ function DiscordIcon({
   );
 }
 
-function formatCurrency(amount: number) {
-  return `$${amount.toFixed(2)}`;
-}
 
 function FormField({
   label,

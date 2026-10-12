@@ -12,13 +12,17 @@ import { data } from '@/app/(subservice)/buy-x-twitter-likes/page-data';
 import { signUpUrl } from '@/lib/auth-urls';
 import { cn } from '@/lib/utils';
 import { OrderFormQuantitySlider } from '@/components/subservice/order-form-quantity-slider';
+import {
+  formatSubserviceOrderTotal as formatCurrency,
+  getSubservicePricePerUnit,
+} from '@/lib/subservice-order-pricing';
 
 const { orderForm } = data;
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
 const QUANTITY_STEP = 100;
-const PRICE_PER_UNIT = 1.2;
+const PRICE_PER_UNIT = getSubservicePricePerUnit('buy-x-twitter-likes');
 
 const TWITTER_ICON =
   '/images/platform-marquee/platform-marquee-x-twitter-platform-icon.png';
@@ -49,9 +53,6 @@ function TwitterIcon({
   );
 }
 
-function formatCurrency(amount: number) {
-  return `$${amount.toFixed(2)}`;
-}
 
 function FormField({
   label,
