@@ -104,7 +104,7 @@ export default function VimeoFollowersOrderFormSection() {
         <PrimaryCard
           bg="card-8"
           darkBg="card-11-dark"
-          className="relative w-full max-w-[796px] overflow-hidden rounded-[24px] border border-[rgba(203,126,247,0.45)] p-6 shadow-none ring-0 ring-offset-0 dark:border-[rgba(255,255,255,0.13)] sm:p-10 lg:p-[50px]"
+          className="relative w-full max-w-[796px] !overflow-visible rounded-[24px] border border-[rgba(203,126,247,0.45)] p-6 shadow-none ring-0 ring-offset-0 dark:border-[rgba(255,255,255,0.13)] sm:p-10 lg:p-[50px]"
         >
           <div className="relative z-10 flex flex-col gap-[30px]">
             <SectionHeading
