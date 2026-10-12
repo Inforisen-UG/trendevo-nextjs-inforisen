@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import BlogPostAiSummarize from './blog-post-ai-summarize';
+
 type ArticleHeroSectionProps = {
   postedAt?: string;
   title?: string;
@@ -52,6 +54,10 @@ export default function ArticleHeroSection({
           sizes="(max-width: 1024px) 100vw, 1075px"
         />
       </div>
+
+      {displayHighlight ? (
+        <BlogPostAiSummarize pageTitle={displayHighlight} />
+      ) : null}
     </div>
   );
 }

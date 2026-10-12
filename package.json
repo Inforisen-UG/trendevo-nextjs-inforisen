@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start --port=3001",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:index-md": "node scripts/sync-index-md.mjs"
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
