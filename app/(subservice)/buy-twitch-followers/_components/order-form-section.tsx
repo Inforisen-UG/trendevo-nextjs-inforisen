@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { ChevronDown } from 'lucide-react';
 import { useMemo, useState, type ReactNode } from 'react';
 import PrimaryCard from '@/components/cards/primary-card';
 import PrimarySection, {
@@ -10,6 +9,7 @@ import PrimarySection, {
 import SectionHeading from '@/components/ui/section-heading';
 import PrimaryButton from '@/components/buttons/primary-button';
 import { cn } from '@/lib/utils';
+import { OrderFormQuantitySlider } from '@/components/subservice/order-form-quantity-slider';
 
 const MIN_QUANTITY = 100;
 const MAX_QUANTITY = 10000;
@@ -44,118 +44,9 @@ function TwitchIcon({
     />
   );
 }
-const SLIDER_THUMB_SRC =
-  '/images/subservice/shared/order-form-quantity-slider-thumb-decoration.svg';
-const SLIDER_TOOLTIP_SRC =
-  '/images/subservice/shared/order-form-quantity-slider-tooltip-decoration.svg';
-const SLIDER_RAIL_HEIGHT = 38;
-const SLIDER_TRACK_Y = 25;
-const SLIDER_THUMB_WIDTH = 47;
-const SLIDER_THUMB_HEIGHT = 38;
-const SLIDER_THUMB_CENTER_Y = (18.3812 / 36.7624) * SLIDER_THUMB_HEIGHT;
-const SLIDER_THUMB_TOP = SLIDER_TRACK_Y - SLIDER_THUMB_CENTER_Y;
-const SLIDER_TOOLTIP_WIDTH = 37;
-const SLIDER_TOOLTIP_HEIGHT = 36;
-const SLIDER_THUMB_INSET = SLIDER_THUMB_WIDTH / 2;
 
 function formatCurrency(amount: number) {
   return `$${amount.toFixed(2)}`;
-}
-
-function QuantitySlider({
-  value,
-  onChange,
-}: {
-  value: number;
-  onChange: (value: number) => void;
-}) {
-  const percent =
-    ((value - MIN_QUANTITY) / (MAX_QUANTITY - MIN_QUANTITY)) * 100;
-
-  return (
-    <div className="flex w-full min-w-0 flex-col gap-3">
-      <div className="flex w-full items-center justify-between text-base font-medium text-[#1a1a1a] dark:text-[#f5f6f7]">
-        <span>Quantity</span>
-        <span>Quantity: {value}</span>
-      </div>
-
-      <div
-        className="relative w-full overflow-visible"
-        style={{ paddingTop: SLIDER_THUMB_TOP + SLIDER_TOOLTIP_HEIGHT - 2 }}
-      >
-        <div
-          className="relative w-full"
-          style={{
-            height: SLIDER_RAIL_HEIGHT,
-            marginLeft: SLIDER_THUMB_INSET,
-            marginRight: SLIDER_THUMB_INSET,
-          }}
-        >
-          <div
-            className="absolute inset-x-0 z-1 h-1 -translate-y-1/2 rounded-full bg-[#f1daff] dark:bg-white/10"
-            style={{ top: SLIDER_TRACK_Y }}
-          >
-            <div
-              className="bg-brand-gradient absolute inset-y-0 left-0 rounded-full"
-              style={{ width: `${percent}%` }}
-            />
-          </div>
-
-          <div
-            className="pointer-events-none absolute z-2"
-            style={{
-              left: `${percent}%`,
-              top: SLIDER_THUMB_TOP,
-              width: SLIDER_THUMB_WIDTH,
-              transform: 'translateX(-50%)',
-            }}
-          >
-            <Image
-              src={SLIDER_THUMB_SRC}
-              alt="Quantity slider thumb handle"
-              width={SLIDER_THUMB_WIDTH}
-              height={SLIDER_THUMB_HEIGHT}
-              aria-hidden
-              unoptimized
-              className="block h-[38px] w-[47px]"
-            />
-
-            <div
-              className="absolute left-1/2 bottom-full -mb-0.5 -translate-x-1/2 -translate-y-[3px]"
-              style={{
-                width: SLIDER_TOOLTIP_WIDTH,
-                height: SLIDER_TOOLTIP_HEIGHT,
-              }}
-            >
-              <Image
-                src={SLIDER_TOOLTIP_SRC}
-                alt="Quantity slider value indicator"
-                width={SLIDER_TOOLTIP_WIDTH}
-                height={SLIDER_TOOLTIP_HEIGHT}
-                aria-hidden
-                unoptimized
-                className="block h-full w-full"
-              />
-              <span className="absolute inset-x-0 top-[7px] text-center text-xs font-medium leading-none text-white">
-                {value}
-              </span>
-            </div>
-          </div>
-
-          <input
-            type="range"
-            min={MIN_QUANTITY}
-            max={MAX_QUANTITY}
-            step={QUANTITY_STEP}
-            value={value}
-            onChange={(event) => onChange(Number(event.target.value))}
-            aria-label="Follower quantity"
-            className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
-          />
-        </div>
-      </div>
-    </div>
-  );
 }
 
 function FormField({
@@ -253,17 +144,13 @@ export default function TwitchFollowersOrderFormSection() {
                 </FormField>
 
                 <FormField label="Service Type">
-                  <FieldShell className="justify-between">
+                  <FieldShell>
                     <div className="flex items-center gap-[5px]">
                       <TwitchIcon variant="field" />
                       <span className="text-sm leading-normal text-[#535353] dark:text-[#f5f6f7]">
                         Followers
                       </span>
                     </div>
-                    <ChevronDown
-                      className="size-6 shrink-0 text-[#535353] dark:text-[#f5f6f7]"
-                      aria-hidden
-                    />
                   </FieldShell>
                 </FormField>
               </div>
@@ -280,7 +167,7 @@ export default function TwitchFollowersOrderFormSection() {
                 </FieldShell>
               </FormField>
 
-              <QuantitySlider value={quantity} onChange={setQuantity} />
+              <OrderFormQuantitySlider value={quantity} onChange={setQuantity} ariaLabel="Follower quantity" />
 
               <div className="flex items-center justify-between rounded-[12px] border border-[#f1daff] bg-white px-6 py-5 dark:border-[rgba(215,215,215,0.13)] dark:bg-[rgba(116,116,116,0.16)] dark:backdrop-blur-[2px]">
                 <span className="text-base font-medium text-[#313131] dark:text-[#f5f6f7]">
