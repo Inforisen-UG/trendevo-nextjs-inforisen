@@ -21,12 +21,25 @@ export default function ServicePricingGroup({
   onToggle: () => void;
 }) {
   return (
-    <div className="flex flex-col gap-6">
+    <div
+      id={`pricing-group-${group.id}`}
+      className={cn(
+        'flex scroll-mt-28 flex-col',
+        isOpen
+          ? 'overflow-hidden rounded-2xl border-[0.6px] border-[rgba(143,42,205,0.51)] dark:border-[#8f2acd]/45'
+          : 'gap-0',
+      )}
+    >
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between rounded-xl border-[0.6px] border-[rgba(143,42,205,0.51)] p-4 text-left"
+        className={cn(
+          'flex w-full items-center justify-between border-[0.6px] border-[rgba(143,42,205,0.51)] p-4 text-left dark:border-[#8f2acd]/45',
+          isOpen
+            ? 'rounded-none border-0 border-b-[0.6px] border-b-[rgba(143,42,205,0.35)] dark:border-b-[#8f2acd]/35'
+            : 'rounded-xl',
+        )}
         style={{ backgroundImage: GROUP_HEADER_BG }}
       >
         <div className="flex min-w-0 items-center gap-3">
@@ -62,7 +75,9 @@ export default function ServicePricingGroup({
         </div>
       </button>
 
-      {isOpen ? <ServicePricingTable rows={group.rows} /> : null}
+      {isOpen ? (
+        <ServicePricingTable rows={group.rows} variant="embedded" />
+      ) : null}
     </div>
   );
 }

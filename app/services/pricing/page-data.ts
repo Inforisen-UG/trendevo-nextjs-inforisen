@@ -13,11 +13,13 @@ export type ServicePricingRow = {
   minOrder: string;
   maxOrder: string;
   averageTime: string;
+  description?: string;
 };
 
 export type ServicePricingGroup = {
   id: string;
   title: string;
+  platformId: string;
   platformIcon: string;
   rows: ServicePricingRow[];
 };
@@ -140,6 +142,7 @@ export const data: ServicesPricingPageData = {
     {
       id: 'premium-mixed-regions',
       title: 'Premium Facebook Video Views | Mixed Regions',
+      platformId: 'facebook',
       platformIcon:
         '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
@@ -147,6 +150,7 @@ export const data: ServicesPricingPageData = {
     {
       id: 'premium-mixed-regions-2',
       title: 'Premium Facebook Video Views | Mixed Regions',
+      platformId: 'facebook',
       platformIcon:
         '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
@@ -154,6 +158,7 @@ export const data: ServicesPricingPageData = {
     {
       id: 'standard-global',
       title: 'Standard Facebook Video Views | Global',
+      platformId: 'facebook',
       platformIcon:
         '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
@@ -161,6 +166,7 @@ export const data: ServicesPricingPageData = {
     {
       id: 'economy-local',
       title: 'Economy Facebook Video Views | Local',
+      platformId: 'facebook',
       platformIcon:
         '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,
@@ -168,6 +174,7 @@ export const data: ServicesPricingPageData = {
     {
       id: 'economy-local-2',
       title: 'Economy Facebook Video Views | Local',
+      platformId: 'facebook',
       platformIcon:
         '/images/our-services/platforms/facebook-platform-icon.webp',
       rows: premiumRows,

@@ -4,6 +4,7 @@ import {
   BookOpen,
   Home,
   Mail,
+  Tag,
   Users,
   type LucideIcon,
 } from 'lucide-react';
@@ -29,6 +30,7 @@ const navLinks: {
   { label: 'Home', href: '/', icon: Home },
   { label: 'About Us', href: '/about-us', icon: Users },
   { label: 'Blog', href: '/blog', icon: BookOpen },
+  { label: 'Pricing', href: '/services/pricing', icon: Tag },
   { label: 'Contact Us', href: '/contact-us', icon: Mail },
 ];
 
