@@ -31,7 +31,7 @@ export const data: RefundPolicyPageData = {
     titlePrefix: 'Refund',
     titleHighlight: 'Policy',
     description:
-      'At Trend Evo, your satisfaction is our priority. Our transparent Refund Policy ensures hassle-free returns and reliable support, giving you confidence with every service.',
+      'At TrendEvo, your satisfaction is our priority. Our transparent Refund Policy ensures hassle-free returns and reliable support, giving you confidence with every service.',
     lastUpdated: '24/03/2026',
   },
 

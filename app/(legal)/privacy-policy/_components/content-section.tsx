@@ -26,8 +26,8 @@ export default async function ContentSection() {
         <p className={legalIntroTextClassName}>
           Your privacy matters to us. Not as a legal formality we are required
           to say, but as a practical commitment that shapes how we built
-          Trendevo and how we operate it every day. This page explains exactly
-          what personal information Trendevo collects when you use our platform,
+          TrendEvo and how we operate it every day. This page explains exactly
+          what personal information TrendEvo collects when you use our platform,
           why we collect it, how we use it, who we share it with, and what
           rights you have over your own data. We have written it in plain
           language because we believe you deserve to actually understand this
@@ -76,7 +76,7 @@ export default async function ContentSection() {
           title="Who We Are"
         >
           <p>
-            Trendevo is a social media marketing panel based in Bangladesh,
+            TrendEvo is a social media marketing panel based in Bangladesh,
             operating through trendevo.com. We provide social media growth
             services including followers, likes, views, comments, and related
             services across platforms including Facebook, Instagram, TikTok,
@@ -103,7 +103,7 @@ export default async function ContentSection() {
               content: (
                 <>
                   <p>
-                    When you register for a Trendevo account, you provide us
+                    When you register for a TrendEvo account, you provide us
                     with your email address and a password of your choosing.
                     This is the minimum information required to create and
                     secure your account.
@@ -116,7 +116,7 @@ export default async function ContentSection() {
                     store, or have any access to your social media login
                     credentials. We never ask for your Facebook, Instagram,
                     TikTok, YouTube, or any other platform password. If anyone
-                    ever contacts you claiming to be from Trendevo and asks for
+                    ever contacts you claiming to be from TrendEvo and asks for
                     a social media password, it is not us.
                   </p>
                   <p>
@@ -132,7 +132,7 @@ export default async function ContentSection() {
               content: (
                 <>
                   <p>
-                    Trendevo does not store your full payment details on our
+                    TrendEvo does not store your full payment details on our
                     servers. When you add funds to your account using bKash,
                     Nagad, Rocket, Upay, Cellfin, Visa, Mastercard, Binance Pay,
                     or Payeer, the transaction is processed through each
@@ -143,7 +143,7 @@ export default async function ContentSection() {
                   </p>
                   <p>
                     We do retain a record of your transaction history on
-                    Trendevo for accounting purposes and to help resolve any
+                    TrendEvo for accounting purposes and to help resolve any
                     payment disputes. This record includes the amount, date,
                     payment method type, and transaction reference number.
                   </p>
@@ -239,7 +239,7 @@ export default async function ContentSection() {
                   We may occasionally send you important information about
                   changes to our platform, updated policies, service
                   disruptions, or new features that are relevant to your use of
-                  Trendevo. These are service communications, not marketing
+                  TrendEvo. These are service communications, not marketing
                   emails. You cannot opt out of essential service communications
                   while you hold an active account.
                 </p>
@@ -257,12 +257,12 @@ export default async function ContentSection() {
               title: 'Payment Processors',
               content: (
                 <p>
-                  When you make a payment on Trendevo, your transaction is
+                  When you make a payment on TrendEvo, your transaction is
                   processed through the relevant payment provider, such as
                   bKash, Nagad, Rocket, Visa, or Mastercard. Each provider
                   receives the information necessary to process your transaction
                   according to their own privacy policies and security
-                  standards. Trendevo does not control how these providers
+                  standards. TrendEvo does not control how these providers
                   handle data on their end.
                 </p>
               ),
@@ -271,7 +271,7 @@ export default async function ContentSection() {
               title: 'Service Delivery Partners',
               content: (
                 <p>
-                  Trendevo works with a network of service providers to deliver
+                  TrendEvo works with a network of service providers to deliver
                   the social media growth services you order. When you place an
                   order, the public URL or username you provided is shared with
                   the relevant delivery partner for fulfilment purposes only.
@@ -307,7 +307,7 @@ export default async function ContentSection() {
               title: 'Business Transfers',
               content: (
                 <p>
-                  In the event that Trendevo is acquired, merged with another
+                  In the event that TrendEvo is acquired, merged with another
                   company, or undergoes a significant business restructure, your
                   data may be transferred to the new entity as part of that
                   process. We would notify you of any such change and ensure
@@ -324,18 +324,18 @@ export default async function ContentSection() {
           title="Data Storage and Security"
         >
           <p>
-            Trendevo takes the security of your personal data seriously. We
+            TrendEvo takes the security of your personal data seriously. We
             implement appropriate technical and organisational measures to
             protect your information against unauthorised access, loss,
             alteration, or disclosure. Your account is protected by the password
             you create at registration. We strongly recommend using a strong,
-            unique password for your Trendevo account and not reusing it across
+            unique password for your TrendEvo account and not reusing it across
             other platforms. We store passwords in encrypted form and never
             store them in plain text. Payment transactions are handled through
             each payment provider&apos;s own secure infrastructure. We do not
             store full payment credentials on our servers. Despite our security
             measures, no system connected to the internet is completely immune
-            to risk. If you ever suspect that your Trendevo account has been
+            to risk. If you ever suspect that your TrendEvo account has been
             accessed without your authorisation, contact our support team
             immediately through our{' '}
             <Link href="/contact-us" className={legalLinkClassName}>
@@ -369,14 +369,14 @@ export default async function ContentSection() {
         <IconSectionCard
           icon="/images/icons/privacy-policy-your-rights-icon.svg"
           title="Your Rights Over Your Personal Data"
-          intro="As a user of Trendevo, you have the following rights regarding your personal data."
+          intro="As a user of TrendEvo, you have the following rights regarding your personal data."
           subsections={[
             {
               title: 'Right to Access',
               content: (
                 <p>
                   You have the right to request a summary of the personal data
-                  Trendevo holds about you. To make this request, contact us
+                  TrendEvo holds about you. To make this request, contact us
                   through our{' '}
                   <Link href="/contact-us" className={legalLinkClassName}>
                     Contact Us
@@ -402,7 +402,7 @@ export default async function ContentSection() {
               content: (
                 <p>
                   You have the right to request that we delete your personal
-                  data and close your Trendevo account. We will process deletion
+                  data and close your TrendEvo account. We will process deletion
                   requests subject to any legal obligations that require us to
                   retain certain records, such as financial transaction history.
                   To request account deletion, contact us through our{' '}
@@ -448,7 +448,7 @@ export default async function ContentSection() {
           <p>
             Our website may contain links to third-party websites and platforms,
             such as Facebook, Instagram, TikTok, YouTube, and payment providers.
-            These links are provided for your convenience. Trendevo is not
+            These links are provided for your convenience. TrendEvo is not
             responsible for the privacy practices of any third-party website.
             When you leave trendevo.com and visit another site, that site&apos;s
             own privacy policy applies. We encourage you to read the privacy
@@ -466,7 +466,7 @@ export default async function ContentSection() {
             in Bangladesh change. When we make meaningful changes, we will
             update the date at the top of this page. For significant changes
             that materially affect how your data is handled, we will notify
-            registered users via email. Your continued use of Trendevo after any
+            registered users via email. Your continued use of TrendEvo after any
             update to this Privacy Policy constitutes your acceptance of the
             revised terms.
           </p>

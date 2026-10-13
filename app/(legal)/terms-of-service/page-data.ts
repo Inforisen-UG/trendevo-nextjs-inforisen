@@ -31,7 +31,7 @@ export const data: TermsOfServicePageData = {
     titlePrefix: 'Terms Of',
     titleHighlight: 'Services',
     description:
-      'Before registering and ordering services, it is important to read and understand the Terms of Service carefully. By using the services offered by smmxp.org, you agree to abide by these terms.',
+      'Before registering and ordering services, it is important to read and understand the Terms of Service carefully. By using the services offered by trendevo.com, you agree to abide by these terms.',
     lastUpdated: '24/03/2026',
   },
 

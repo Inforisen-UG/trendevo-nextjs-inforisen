@@ -317,18 +317,25 @@ function FeaturedReviewCard({
   featuredReview,
   assets,
   onPlay,
+  className,
 }: {
   featuredReview: TestimonialFeaturedReview;
   assets: TestimonialAssets;
   onPlay: () => void;
+  className?: string;
 }) {
   return (
-    <article className="relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] max-[1249px]:md:max-w-[600px] max-[1249px]:md:h-[440px] min-[1250px]:mx-0 min-[1250px]:h-[538px] min-[1250px]:max-w-none min-[1250px]:flex-1">
+    <article
+      className={cn(
+        'relative mx-auto h-[380px] w-full min-w-0 max-w-[464px] overflow-hidden rounded-[30px] sm:h-[460px] md:h-[440px] md:max-w-[600px] lg:mx-0 lg:h-full lg:min-h-[538px] lg:max-w-none',
+        className,
+      )}
+    >
       <Image
         src={featuredReview.image}
             alt={`${featuredReview.name} featured review photo`}
         fill
-        sizes="(max-width: 768px) 100vw, 464px"
+        sizes="(max-width: 1024px) 100vw, 33vw"
         className="object-cover"
         unoptimized
       />
@@ -452,7 +459,7 @@ function ScrollableReviewColumn({
   return (
     <div
       className={cn(
-        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] max-[1249px]:md:h-[500px] min-[1250px]:h-[538px]',
+        'relative h-[380px] min-h-0 min-w-0 sm:h-[460px] md:h-[500px] lg:h-full lg:min-h-[538px]',
         className,
       )}
     >
@@ -486,6 +493,53 @@ function ScrollableReviewColumn({
   );
 }
 
+function TextReviewsSlider({
+  reviews,
+  assets,
+}: {
+  reviews: TestimonialTextReview[];
+  assets: TestimonialAssets;
+}) {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  return (
+    <div className="flex w-full flex-col items-center gap-6">
+      <Swiper
+        className="testimonials-text-swiper w-full"
+        spaceBetween={18}
+        slidesPerView={1.08}
+        slidesPerGroup={1}
+        onSwiper={setSwiper}
+        onSlideChange={(instance) => setActiveIndex(instance.activeIndex)}
+        onBreakpoint={(instance) => setActiveIndex(instance.activeIndex)}
+        breakpoints={{
+          480: {
+            slidesPerView: 1.2,
+            spaceBetween: 18,
+          },
+          640: {
+            slidesPerView: 1.45,
+            spaceBetween: 18,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+          },
+        }}
+      >
+        {reviews.map((review) => (
+          <SwiperSlide key={review.id} className="!h-auto">
+            <TextReviewCard review={review} assets={assets} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <TestimonialsPagination swiper={swiper} activeIndex={activeIndex} />
+    </div>
+  );
+}
+
 function CustomerReviewsGrid({
   leftTextReviews,
   rightTextReviews,
@@ -499,28 +553,45 @@ function CustomerReviewsGrid({
   assets: TestimonialAssets;
   onPlayFeatured: () => void;
 }) {
-  return (
-    <div className="grid w-full max-w-[1440px] grid-cols-1 gap-[18px] max-[1249px]:md:grid-cols-2 min-[1250px]:grid-cols-3 min-[1250px]:items-start">
-      <ScrollableReviewColumn
-        reviews={leftTextReviews}
-        assets={assets}
-        className="order-2 min-[1250px]:order-1 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
-      />
+  const mobileTabletReviews = [...leftTextReviews, ...rightTextReviews];
 
-      <div className="order-1 max-[1249px]:md:col-span-2 min-[1250px]:order-2">
+  return (
+    <>
+      <div className="flex w-full max-w-[1440px] flex-col gap-[18px] lg:hidden">
         <FeaturedReviewCard
           featuredReview={featuredReview}
           assets={assets}
           onPlay={onPlayFeatured}
+          className="w-full"
         />
+        <TextReviewsSlider reviews={mobileTabletReviews} assets={assets} />
       </div>
 
-      <ScrollableReviewColumn
-        reviews={rightTextReviews}
-        assets={assets}
-        className="order-3 min-[1250px]:max-w-[464px] min-[1250px]:flex-1"
-      />
-    </div>
+      <div
+        className="hidden w-full max-w-[1440px] grid-cols-1 gap-[18px] lg:grid lg:grid-cols-3 lg:items-stretch lg:min-h-[538px]"
+      >
+        <ScrollableReviewColumn
+          reviews={leftTextReviews}
+          assets={assets}
+          className="min-w-0 lg:order-1"
+        />
+
+        <div className="flex min-h-0 min-w-0 lg:order-2 lg:min-h-[538px]">
+          <FeaturedReviewCard
+            featuredReview={featuredReview}
+            assets={assets}
+            onPlay={onPlayFeatured}
+            className="h-full w-full"
+          />
+        </div>
+
+        <ScrollableReviewColumn
+          reviews={rightTextReviews}
+          assets={assets}
+          className="min-w-0 lg:order-3"
+        />
+      </div>
+    </>
   );
 }
 

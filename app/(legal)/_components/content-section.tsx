@@ -21,21 +21,21 @@ import {
 import { cn } from '@/lib/utils';
 
 const youMayItems = [
-  'Use Trendevo to grow the social media presence of accounts and content that you own or manage with the account owner\u2019s consent.',
-  'Use Trendevo\u2019s API access to integrate our services into your own reseller panel, subject to API terms agreed separately.',
-  'Use Trendevo for commercial purposes including managing services for clients as a digital marketing agency or freelancer.',
+  'Use TrendEvo to grow the social media presence of accounts and content that you own or manage with the account owner\u2019s consent.',
+  'Use TrendEvo\u2019s API access to integrate our services into your own reseller panel, subject to API terms agreed separately.',
+  'Use TrendEvo for commercial purposes including managing services for clients as a digital marketing agency or freelancer.',
   'Contact our support team at any time with questions, complaints, or requests.',
 ];
 
 const youMayNotItems = [
-  'Use Trendevo to target accounts, content, or individuals in a way that constitutes harassment, abuse, or targeted harm.',
-  'Use Trendevo to place orders on accounts you do not own or manage without the account owner\u2019s explicit consent.',
+  'Use TrendEvo to target accounts, content, or individuals in a way that constitutes harassment, abuse, or targeted harm.',
+  'Use TrendEvo to place orders on accounts you do not own or manage without the account owner\u2019s explicit consent.',
   'Attempt to reverse-engineer, scrape, or exploit our platform\u2019s technical systems in any unauthorised way.',
-  'Use automated tools or bots to create multiple Trendevo accounts or to manipulate your account balance.',
-  'Resell Trendevo services through our platform in a way that misrepresents their nature or makes fraudulent claims to end users.',
+  'Use automated tools or bots to create multiple TrendEvo accounts or to manipulate your account balance.',
+  'Resell TrendEvo services through our platform in a way that misrepresents their nature or makes fraudulent claims to end users.',
   'Provide false information during account registration or order placement.',
-  'Use Trendevo in any way that violates the laws of Bangladesh or the terms of service of the social media platforms on which the services are delivered.',
-  'Trendevo reserves the right to suspend or permanently terminate accounts found to be in violation of these acceptable use rules without prior notice and without refund of remaining balance in cases of serious or deliberate abuse.',
+  'Use TrendEvo in any way that violates the laws of Bangladesh or the terms of service of the social media platforms on which the services are delivered.',
+  'TrendEvo reserves the right to suspend or permanently terminate accounts found to be in violation of these acceptable use rules without prior notice and without refund of remaining balance in cases of serious or deliberate abuse.',
 ];
 
 export default function TermsContentSection() {
@@ -44,13 +44,13 @@ export default function TermsContentSection() {
       <div className="container flex flex-col gap-9">
         <h2 className={cn('grid max-w-[762px]', legalPageHeadingClassName)}>
           <span>Terms of Service — Please Read</span>
-          <span className="text-gradient">Before Using Trend Evo</span>
+          <span className="text-gradient">Before Using TrendEvo</span>
         </h2>
         <p className={legalIntroTextClassName}>
           Most Terms of Service pages are written by lawyers for other lawyers.
           They are long, confusing, and deliberately difficult to read. We have
           written ours differently. This page explains the rules and
-          expectations that govern your use of Trendevo. It protects both you
+          expectations that govern your use of TrendEvo. It protects both you
           and us by making sure everyone is on the same page before any money
           changes hands or any order is placed. We have kept the language as
           plain and direct as possible while still covering everything that
@@ -94,14 +94,14 @@ export default function TermsContentSection() {
           <p className={legalBodyTextClassName}>
             These Terms of Service were last updated in 2026. We will update
             this page when our terms change in any meaningful way and will note
-            the revision date here. Your continued use of Trendevo after any
+            the revision date here. Your continued use of TrendEvo after any
             update constitutes acceptance of the revised terms.
           </p>
         </PrimaryCard>
 
-        <ContentBlock number={1} title="Who We Are and What Trend evo Does">
+        <ContentBlock number={1} title="Who We Are and What TrendEvo Does">
           <p>
-            Trendevo is a social media marketing panel operating through
+            TrendEvo is a social media marketing panel operating through
             trendevo.com. We are based in Bangladesh and have been serving users
             since 2020. Our platform provides social media growth services
             including followers, likes, views, comments, shares, watch time, and
@@ -115,15 +115,15 @@ export default function TermsContentSection() {
             on our About Us page.
           </p>
           <p>
-            By creating an account and using Trendevo, you enter into a binding
+            By creating an account and using TrendEvo, you enter into a binding
             agreement with us under these Terms of Service.
           </p>
         </ContentBlock>
 
-        <ContentBlock number={2} title="Eligibility — Who Can Use Trend Evo">
-          <p>To use Trendevo, you must meet the following conditions.</p>
+        <ContentBlock number={2} title="Eligibility — Who Can Use TrendEvo">
+          <p>To use TrendEvo, you must meet the following conditions.</p>
           <p>
-            You must be at least 18 years of age. Trendevo is not intended for
+            You must be at least 18 years of age. TrendEvo is not intended for
             use by minors. If you are under 18, you are not permitted to create
             an account or place orders on our platform.
           </p>
@@ -141,7 +141,7 @@ export default function TermsContentSection() {
             or consent, is a violation of these terms.
           </p>
           <p>
-            If you are using Trendevo on behalf of a business or organisation,
+            If you are using TrendEvo on behalf of a business or organisation,
             you represent that you have the authority to bind that entity to
             these terms.
           </p>
@@ -149,15 +149,15 @@ export default function TermsContentSection() {
 
         <ContentBlock number={3} title="Account Registration and Security">
           <p>
-            Creating an account on Trendevo is free. You will need to provide a
+            Creating an account on TrendEvo is free. You will need to provide a
             valid email address and create a password to register.
           </p>
           <p>
             You are responsible for maintaining the security of your account.
             This means using a strong, unique password and not sharing your
-            login credentials with anyone you do not trust. Trendevo will never
+            login credentials with anyone you do not trust. TrendEvo will never
             ask you for your password. If anyone contacts you claiming to be
-            from Trendevo and asks for your account password or any social media
+            from TrendEvo and asks for your account password or any social media
             password, do not share it and report the contact to us immediately
             through our{' '}
             <Link href="/contact-us" className={legalLinkClassName}>
@@ -172,7 +172,7 @@ export default function TermsContentSection() {
             secure it.
           </p>
           <p>
-            Trendevo reserves the right to suspend or terminate accounts that
+            TrendEvo reserves the right to suspend or terminate accounts that
             show signs of fraudulent activity, abuse of our platform, or
             violation of these terms.
           </p>
@@ -183,7 +183,7 @@ export default function TermsContentSection() {
           title="Our Services — What We Offer and How They Work"
         >
           <p>
-            Trendevo provides social media growth services delivered through our
+            TrendEvo provides social media growth services delivered through our
             online panel at trendevo.com. Services are available for purchase by
             registered users who have added funds to their account balance.
           </p>
@@ -201,7 +201,7 @@ export default function TermsContentSection() {
             delivery period.
           </p>
           <p>
-            Trendevo acts as an intermediary between you and our service
+            TrendEvo acts as an intermediary between you and our service
             delivery network. We coordinate delivery on your behalf but do not
             guarantee specific outcomes beyond the quantity and service type
             stated in the package description. Social media platforms are
@@ -212,12 +212,12 @@ export default function TermsContentSection() {
 
         <ContentBlock number={5} title="Payments, Pricing, and Account Balance">
           <p>
-            All prices on Trendevo are displayed in Bangladeshi Taka (BDT)
+            All prices on TrendEvo are displayed in Bangladeshi Taka (BDT)
             unless otherwise stated. Prices are inclusive of all applicable fees
             from our side. There are no hidden charges added at checkout.
           </p>
           <p>
-            To place an order, you must first add funds to your Trendevo account
+            To place an order, you must first add funds to your TrendEvo account
             balance. We accept the following payment methods: bKash, Nagad,
             Rocket, Upay, Cellfin, Visa, Mastercard, Binance Pay, and Payeer.
             Payment methods may be updated from time to time and the current
@@ -226,11 +226,11 @@ export default function TermsContentSection() {
           <p>
             Funds added to your account balance are credited instantly upon
             confirmed payment. Your balance does not expire and can be used for
-            any current or future service on Trendevo.
+            any current or future service on TrendEvo.
           </p>
           <p>
             Account balance funds are non-refundable as cash withdrawals. Once
-            funds are added to your Trendevo balance, they can be used for
+            funds are added to your TrendEvo balance, they can be used for
             services on our platform but cannot be transferred back to your
             bKash, Nagad, or other payment account. Please refer to our{' '}
             <Link href="/refund-policy" className={legalLinkClassName}>
@@ -239,7 +239,7 @@ export default function TermsContentSection() {
             for full details on when account credits are issued.
           </p>
           <p>
-            Trendevo reserves the right to adjust service pricing at any time.
+            TrendEvo reserves the right to adjust service pricing at any time.
             Price changes will be reflected on the services page and do not
             affect orders already placed and confirmed.
           </p>
@@ -254,7 +254,7 @@ export default function TermsContentSection() {
               </h2>
             </div>
             <p className={legalBodyTextClassName}>
-              Trendevo is a legitimate business tool used by thousands of
+              TrendEvo is a legitimate business tool used by thousands of
               creators, businesses, and agencies across Bangladesh. To protect
               all users of our platform and to ensure the service remains
               operational and effective, we require all users to follow the
@@ -319,14 +319,14 @@ export default function TermsContentSection() {
 
         <ContentBlock number={9} title="Third-Party Social Media Platforms">
           <p>
-            Trendevo provides services that interact with third-party social
+            TrendEvo provides services that interact with third-party social
             media platforms including but not limited to Facebook, Instagram,
             TikTok, YouTube, Telegram, and X. These platforms are independent
             companies with their own terms of service, community guidelines, and
             technical systems.
           </p>
           <p>
-            Trendevo is not affiliated with, endorsed by, or in any way
+            TrendEvo is not affiliated with, endorsed by, or in any way
             officially connected to any of these platforms. We do not have any
             special relationship with Meta, ByteDance, Google, or any other
             platform operator.
@@ -335,12 +335,12 @@ export default function TermsContentSection() {
             Social media platforms periodically update their algorithms,
             policies, and technical infrastructure in ways that can affect the
             delivery or retention of SMM services. These changes are outside
-            Trendevo&apos;s control. We cannot guarantee that services which
+            TrendEvo&apos;s control. We cannot guarantee that services which
             work effectively today will perform identically in the future if a
             platform makes a significant technical or policy change.
           </p>
           <p>
-            By using Trendevo, you acknowledge that you are also subject to the
+            By using TrendEvo, you acknowledge that you are also subject to the
             terms of service of the social media platforms on which your ordered
             services are delivered. It is your responsibility to understand
             those terms and to use our services in a manner consistent with your
@@ -350,27 +350,27 @@ export default function TermsContentSection() {
 
         <ContentBlock number={10} title="Limitation of Liability">
           <p>
-            Trendevo provides social media growth services on an as-available
+            TrendEvo provides social media growth services on an as-available
             basis. While we work hard to deliver every order accurately and on
             time, we cannot guarantee uninterrupted service or specific business
             outcomes resulting from our services.
           </p>
           <p>
             To the maximum extent permitted by applicable law in Bangladesh,
-            Trendevo&apos;s total liability to any user for any claim arising
+            TrendEvo&apos;s total liability to any user for any claim arising
             from or related to their use of our platform is limited to the
             amount paid by that user for the specific order or service that is
             the subject of the claim.
           </p>
           <p>
-            Trendevo is not liable for any indirect, incidental, consequential,
+            TrendEvo is not liable for any indirect, incidental, consequential,
             or punitive damages arising from your use of our services, including
             but not limited to loss of business, loss of revenue, loss of data,
             or damage to your social media account&apos;s standing or
             algorithmic performance.
           </p>
           <p>
-            Trendevo is not responsible for any action taken by a social media
+            TrendEvo is not responsible for any action taken by a social media
             platform against your account, including account suspension, content
             removal, or reduction in organic reach, whether or not such action
             is related to your use of our services.
@@ -381,7 +381,7 @@ export default function TermsContentSection() {
           <p>
             All content on trendevo.com, including our logo, platform design,
             written content, service descriptions, and technical systems, is the
-            property of Trendevo and is protected by applicable intellectual
+            property of TrendEvo and is protected by applicable intellectual
             property laws.
           </p>
           <p>
@@ -390,7 +390,7 @@ export default function TermsContentSection() {
             permission.
           </p>
           <p>
-            By submitting content to Trendevo, such as support messages or
+            By submitting content to TrendEvo, such as support messages or
             feedback, you grant us a limited, non-exclusive right to use that
             content for the purpose of providing and improving our services.
           </p>
@@ -398,7 +398,7 @@ export default function TermsContentSection() {
 
         <ContentBlock number={12} title="Privacy and Data Protection">
           <p>
-            Your use of Trendevo is also governed by our{' '}
+            Your use of TrendEvo is also governed by our{' '}
             <Link href="/privacy-policy" className={legalLinkClassName}>
               Privacy Policy
             </Link>
@@ -407,7 +407,7 @@ export default function TermsContentSection() {
             information.
           </p>
           <p>
-            By creating an account and using Trendevo, you agree to our data
+            By creating an account and using TrendEvo, you agree to our data
             practices as described in the Privacy Policy. We encourage you to
             read it in full before registering.
           </p>
@@ -415,7 +415,7 @@ export default function TermsContentSection() {
 
         <ContentBlock number={13} title="Account Suspension and Termination">
           <p>
-            Trendevo reserves the right to suspend or terminate any account at
+            TrendEvo reserves the right to suspend or terminate any account at
             our discretion in the following circumstances. Violation of any
             section of these Terms of Service. Fraudulent activity including
             chargebacks, false payment claims, or account manipulation. Abusive
@@ -445,7 +445,7 @@ export default function TermsContentSection() {
 
         <ContentBlock number={14} title="Account Suspension and Termination">
           <p>
-            Trendevo may update these Terms of Service from time to time as our
+            TrendEvo may update these Terms of Service from time to time as our
             platform grows, as new services are added, or as legal requirements
             in Bangladesh evolve. When we make meaningful changes, we will
             update the date at the top of this page.
@@ -453,12 +453,12 @@ export default function TermsContentSection() {
           <p>
             For significant changes that materially affect your rights or
             obligations, we will notify registered users via email where
-            possible. Your continued use of Trendevo after any update to these
+            possible. Your continued use of TrendEvo after any update to these
             terms constitutes your acceptance of the revised terms.
           </p>
           <p>
             If you do not agree with an updated version of these terms, you
-            should stop using Trendevo and contact our support team to close
+            should stop using TrendEvo and contact our support team to close
             your account.
           </p>
         </ContentBlock>
@@ -467,7 +467,7 @@ export default function TermsContentSection() {
           <p>
             These Terms of Service are governed by and construed in accordance
             with the laws of Bangladesh. Any dispute arising from or related to
-            your use of Trendevo that cannot be resolved through our support
+            your use of TrendEvo that cannot be resolved through our support
             process will be subject to the exclusive jurisdiction of the courts
             of Bangladesh.
           </p>

@@ -954,7 +954,7 @@ export const data: HomePageData = {
     sectionBackground:
       'linear-gradient(68.23deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
     badge: 'Customer Reviews',
-    title: 'Over 11,604 Users Across Bangladesh gt<Trust TrendEvo>',
+    title: 'Over 0 Users Across Bangladesh gt<Trust TrendEvo>',
     subtitle:
       'Read what real customers say about their experience with TrendEvo. These are genuine reviews from people who have used our services.',
     underlineSrc: '/images/testimonials/customer-reviews-section-underline.svg',
@@ -978,15 +978,15 @@ export const data: HomePageData = {
     leftTextReviews: [
       {
         id: 'left-1',
-        name: 'Sabbir Ahmed',
+        name: 'Ariyan Khan',
         role: 'Ecommerce Business Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
+        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
         quote:
           'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
       },
       {
         id: 'left-2',
-        name: 'Nusrat Jahan',
+        name: 'Nadia Ahmed',
         role: 'SMM Freelancer',
         avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
         quote:
@@ -996,9 +996,9 @@ export const data: HomePageData = {
     rightTextReviews: [
       {
         id: 'right-1',
-        name: 'Rakib Hasan',
+        name: 'Seam Rahman',
         role: 'Digital Marketing Agency Owner',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
+        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
         quote:
           'The dashboard is simple and the pricing works well for Bangladesh clients. It is useful when we manage multiple campaigns for different pages.',
       },
@@ -1006,15 +1006,15 @@ export const data: HomePageData = {
         id: 'right-2',
         name: 'Farhana Islam',
         role: 'Content Creator',
-        avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
+        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
         quote:
           'I use TrendEvo for YouTube and TikTok campaigns. The local payment options and support make the process easier than many foreign SMM panels.',
       },
     ],
     featuredReview: {
-      name: 'Sabbir Ahmed',
+      name: 'Ariyan Khan',
       role: 'Ecommerce Business Owner',
-      avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
+      avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
       image: '/images/testimonials/over-11-604-users-across-bangladesh-trust-trendevo-featured-photo.webp',
       quote:
         'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',

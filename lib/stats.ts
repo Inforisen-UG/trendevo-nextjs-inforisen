@@ -54,6 +54,10 @@ export function formatUsersTrustLabel(usersAll: number): string {
   return `Trusted by ${formatUsersCount(usersAll)} Users in Bangladesh`;
 }
 
+export function formatTestimonialsUsersTitle(usersAll: number): string {
+  return `Over ${usersAll.toLocaleString('en-US')} Users Across Bangladesh gt<Trust TrendEvo>`;
+}
+
 export function getSatisfactionRate(data: StatsData): number {
   if (data.ordersAll <= 0) {
     return FALLBACK_SATISFACTION_RATE;

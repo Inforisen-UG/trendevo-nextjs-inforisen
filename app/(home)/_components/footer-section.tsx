@@ -272,7 +272,7 @@ export default function FooterSection() {
             className="pointer-events-none absolute inset-0 opacity-40 bg-[url('/images/footer/footer-copyright-pattern-decoration.webp')] bg-cover bg-center dark:hidden"
           />
           <p className="relative text-center text-[10px] font-medium leading-tight text-[#313131] sm:text-xs sm:leading-snug md:text-sm lg:text-lg dark:text-[#eac8ff]">
-            Copyright 2024-2026 Trend Evo | All Right Reserved
+            Copyright 2024-2026 TrendEvo | All Right Reserved
           </p>
         </div>
       </footer>
