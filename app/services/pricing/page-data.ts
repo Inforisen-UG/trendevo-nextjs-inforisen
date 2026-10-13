@@ -69,7 +69,7 @@ export const data: ServicesPricingPageData = {
 
   heading: {
     title:
-      "Discover gt<Rendevo's> Full Social Media Services & Pricing Guide",
+      "Discover gt<TrendEvo's> Full Social Media Services & Pricing Guide",
   },
 
   pricingPlatforms: [
@@ -184,7 +184,7 @@ export const data: ServicesPricingPageData = {
   cta: {
     title: 'Ready to gt<Grow your Social Media> in Bangladesh',
     description:
-      'Join thousands of users growing faster with Rend Evo Panel on Facebook, Instagram, YouTube, and TikTok. Get started free in under 60 seconds.We ensure 100% customer satisfaction with an all-in-one, fully automated SMM solution that helps your business stand out and grow effortlessly.',
+      'Join over 56486 users who are already using TrendEvo to grow faster on Facebook, Instagram, YouTube, TikTok, and more. Getting started is free and takes less than 40 seconds.',
     primaryButtonLabel: 'Register Now',
     secondaryButtonLabel: 'See all Services',
     secondaryButtonHref: '/services',

@@ -246,10 +246,10 @@ export default function FooterSection() {
                 iconAlt="Phone"
               >
                 <a
-                  href="tel:+880188888877777"
+                  href="tel:+88018888887777"
                   className="break-all hover:underline"
                 >
-                  +880188888877777
+                  +880 1888 8887 7777
                 </a>
               </ContactRow>
               <ContactRow

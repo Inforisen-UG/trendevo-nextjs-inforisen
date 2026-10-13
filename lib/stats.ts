@@ -58,6 +58,41 @@ export function formatTestimonialsUsersTitle(usersAll: number): string {
   return `Over ${usersAll.toLocaleString('en-US')} Users Across Bangladesh gt<Trust TrendEvo>`;
 }
 
+const CTA_USERS_PLACEHOLDER = '{{usersAll}}';
+const LEGACY_CTA_USERS_COUNT = '56486';
+
+export function ctaDescriptionNeedsUserCount(description: string): boolean {
+  return (
+    description.includes(CTA_USERS_PLACEHOLDER) ||
+    description.includes(`Join over ${LEGACY_CTA_USERS_COUNT} users`)
+  );
+}
+
+export function applyUsersAllToCtaDescription(
+  description: string,
+  usersAll: number,
+): string {
+  const count = usersAll.toLocaleString('en-US');
+
+  if (description.includes(CTA_USERS_PLACEHOLDER)) {
+    return description.replaceAll(CTA_USERS_PLACEHOLDER, count);
+  }
+
+  return description.replaceAll(
+    `Join over ${LEGACY_CTA_USERS_COUNT} users`,
+    `Join over ${count} users`,
+  );
+}
+
+export async function resolveCtaDescription(description: string): Promise<string> {
+  if (!ctaDescriptionNeedsUserCount(description)) {
+    return description;
+  }
+
+  const { usersAll } = await getStats();
+  return applyUsersAllToCtaDescription(description, usersAll);
+}
+
 export function getSatisfactionRate(data: StatsData): number {
   if (data.ordersAll <= 0) {
     return FALLBACK_SATISFACTION_RATE;

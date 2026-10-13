@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 import PrimarySection from '@/components/sections/primary-section';
+import { resolveCtaDescription } from '@/lib/stats';
 import { cn } from '@/lib/utils';
 import { renderText } from '@/lib/utils/renderText';
 
@@ -20,7 +21,7 @@ type CtaSectionProps = {
   className?: string;
 };
 
-export default function CtaSection({
+export default async function CtaSection({
   title,
   description,
   buttonsOutlet,
@@ -28,6 +29,8 @@ export default function CtaSection({
   imageAlt = 'Start growing with TrendEvo',
   className,
 }: CtaSectionProps) {
+  const resolvedDescription = await resolveCtaDescription(description);
+
   return (
     <PrimarySection
       className={cn('py-12 sm:py-16', className)}
@@ -105,7 +108,7 @@ export default function CtaSection({
                     {typeof title === 'string' ? renderText(title) : title}
                   </h2>
                   <p className="relative z-10 text-sm font-normal leading-normal text-[#13203b] sm:text-base dark:text-white">
-                    {renderText(description)}
+                    {renderText(resolvedDescription)}
                   </p>
                 </div>
 
