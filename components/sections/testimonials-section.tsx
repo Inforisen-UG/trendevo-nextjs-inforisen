@@ -423,7 +423,7 @@ function ScrollableReviewColumn({
   className?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [hasMoreBelow, setHasMoreBelow] = useState(reviews.length > 2);
+  const [hasMoreBelow, setHasMoreBelow] = useState(reviews.length >= 2);
 
   const updateScrollState = useCallback(() => {
     const el = scrollRef.current;
@@ -454,7 +454,7 @@ function ScrollableReviewColumn({
     });
   };
 
-  const showScrollHint = hasMoreBelow && reviews.length > 2;
+  const showScrollHint = hasMoreBelow && reviews.length >= 2;
 
   return (
     <div
@@ -466,10 +466,12 @@ function ScrollableReviewColumn({
       <div
         ref={scrollRef}
         className={cn(
-          'flex h-full min-h-0 flex-col overflow-y-auto overscroll-y-contain pr-1 scroll-smooth',
-          '[scrollbar-width:thin] [scrollbar-color:rgba(209,129,255,0.45)_transparent]',
+          'flex h-full min-h-0 flex-col overflow-y-scroll overscroll-y-contain pr-1 scroll-smooth lg:h-[472px] lg:max-h-[472px] lg:shrink-0',
+          '[scrollbar-gutter:stable]',
+          '[scrollbar-width:thin] [scrollbar-color:rgba(209,129,255,0.65)_rgba(234,214,247,0.45)]',
           '[&::-webkit-scrollbar]:w-1.5',
-          '[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#d18dfa]/50',
+          '[&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-[#ead6f7]/70 dark:[&::-webkit-scrollbar-track]:bg-white/10',
+          '[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#d18dfa]/70 hover:[&::-webkit-scrollbar-thumb]:bg-[#c76ef5]',
           showScrollHint &&
             '[mask-image:linear-gradient(to_bottom,black_calc(100%-56px),transparent_100%)]',
         )}
