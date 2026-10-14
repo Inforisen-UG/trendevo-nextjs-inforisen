@@ -1013,11 +1013,10 @@ export const data: HomePageData = {
       },
     ],
     featuredReview: {
-      name: 'Nadia Ahmed',
+      name: 'Amelia Rose',
       role: 'SMM Freelancer',
-      avatar: '/images/testimonials/testimonials-nadia-ahmed-avatar.png',
-      image:
-        '/images/testimonials/testimonials-video-review-thumbnail-4.webp',
+      avatar: '/images/testimonials/testimonials-featured-review-photo.webp',
+      image: '/images/testimonials/testimonials-featured-review-photo.webp',
       quote:
         'As a freelancer, I need fast delivery and clear order status for client work. TrendEvo helps me manage Facebook and Instagram orders without wasting time.',
     },

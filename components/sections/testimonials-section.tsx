@@ -125,22 +125,26 @@ function AuthorInfo({
   avatar,
   verifyBadgeSrc,
   variant = 'light',
+  avatarUnoptimized = false,
 }: {
   name: string;
   role: string;
   avatar: string;
   verifyBadgeSrc: string;
   variant?: 'light' | 'dark';
+  avatarUnoptimized?: boolean;
 }) {
   return (
     <div className="flex items-center gap-2">
       <Image
         src={avatar}
         alt={`${name} avatar`}
-        width={55}
-        height={55}
-        className="size-[51px] shrink-0 rounded-full object-cover"
-        unoptimized
+        width={110}
+        height={110}
+        quality={100}
+        sizes="51px"
+        unoptimized={avatarUnoptimized}
+        className="size-[51px] shrink-0 rounded-full object-cover object-[center_15%]"
       />
       <div className="min-w-0">
         <div className="flex items-center gap-1">
@@ -333,11 +337,12 @@ function FeaturedReviewCard({
     >
       <Image
         src={featuredReview.image}
-            alt={`${featuredReview.name} featured review photo`}
+        alt={`${featuredReview.name} featured review photo`}
         fill
-        sizes="(max-width: 1024px) 100vw, 33vw"
-        className="object-cover"
-        unoptimized
+        priority
+        quality={100}
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 480px"
+        className="object-cover object-[center_20%]"
       />
 
       <StarRating
@@ -370,6 +375,7 @@ function FeaturedReviewCard({
           avatar={featuredReview.avatar}
           verifyBadgeSrc={assets.verifyBadgeSrc}
           variant="dark"
+          avatarUnoptimized
         />
         <p className="mt-3 text-xs font-medium leading-normal text-[#40454e] dark:text-[#dfe0e4]">
           {featuredReview.quote}
