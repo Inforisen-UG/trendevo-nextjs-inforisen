@@ -11,7 +11,7 @@ const PAYMENT_METHOD_ICONS = [
     src: '/images/payment-methods/wise-payment-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-wise-accepted-smm-panel.png',
     alt: 'Wise Accepted SMM panel',
-    positionClassName: 'relative top-14',
+    positionClassName: 'relative lg:top-14',
   },
   {
     src: '/images/payment-methods/nexus-pay-accepted-smm-panel.png',
@@ -23,25 +23,25 @@ const PAYMENT_METHOD_ICONS = [
     src: '/images/payment-methods/visa-card-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-visa-card-accepted-smm-panel.png',
     alt: 'Visa Card Accepted SMM panel',
-    positionClassName: 'relative -top-7',
+    positionClassName: 'relative lg:-top-7',
   },
   {
     src: '/images/payment-methods/bkash-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-bkash-accepted-smm-panel.png',
     alt: 'bKash Accepted SMM panel',
-    positionClassName: 'relative -top-10',
+    positionClassName: 'relative lg:-top-10',
   },
   {
     src: '/images/payment-methods/nagad-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-nagad-accepted-smm-panel.png',
     alt: 'Nagad Accepted SMM panel',
-    positionClassName: 'relative -top-10',
+    positionClassName: 'relative lg:-top-10',
   },
   {
     src: '/images/payment-methods/bitcoin-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-bitcoin-accepted-smm-panel.png',
     alt: 'BitCoin Accepted SMM panel',
-    positionClassName: 'relative -top-7',
+    positionClassName: 'relative lg:-top-7',
   },
   {
     src: '/images/payment-methods/master-card-accepted-smm-panel.png',
@@ -53,7 +53,7 @@ const PAYMENT_METHOD_ICONS = [
     src: '/images/payment-methods/cryptomous-accepted-smm-panel.png',
     darkSrc: '/images/payment-methods/dark-cryptomous-accepted-smm-panel.png',
     alt: 'cryptomous accepted smm panel',
-    positionClassName: 'relative top-18',
+    positionClassName: 'relative lg:top-18',
   },
 ] as const;
 
@@ -113,11 +113,19 @@ export default function PaymentMethodsSection() {
           subtitleClassName={heading.subtitleClassName}
         />
 
-        <div className='flex items-center justify-center relative w-full'>
-          <div className='absolute top-0 left-0 w-full h-[190px]'>
-            <Image src="/images/payment-methods/payment-methods-bg-image.svg" alt="payment methods background image" className="w-full h-full object-cover bg-center bg-no-repeat relative top-12" width={1200} height={1200} />
+        <div className="relative flex w-full items-center justify-center">
+          <div className="pointer-events-none absolute top-0 left-0 hidden h-[190px] w-full lg:block">
+            <Image
+              src="/images/payment-methods/payment-methods-bg-image.svg"
+              alt=""
+              aria-hidden
+              className="relative top-12 h-full w-full bg-center bg-no-repeat object-cover"
+              width={1200}
+              height={1200}
+            />
           </div>
-           <div className='z-10 relative flex min-h-[190px] flex-row items-center justify-between w-full me-26 ms-26'>
+          <div className="relative z-10 w-full overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] lg:overflow-visible [&::-webkit-scrollbar]:hidden">
+            <div className="flex w-max min-h-[100px] items-center gap-3 px-1 py-2 sm:gap-4 sm:min-h-[120px] lg:min-h-[190px] lg:w-full lg:min-w-0 lg:justify-between lg:gap-0 lg:px-0 lg:ms-26 lg:me-26">
               {PAYMENT_METHOD_ICONS.map((icon, index) => (
                 <div
                   key={icon.src}
@@ -130,8 +138,8 @@ export default function PaymentMethodsSection() {
                     height={500}
                     alt={icon.alt}
                     quality={100}
-                    sizes="500px"
-                    className="w-20 object-contain dark:hidden"
+                    sizes="(max-width: 1023px) 56px, 80px"
+                    className="w-14 object-contain sm:w-16 lg:w-20 dark:hidden"
                   />
                   <Image
                     src={icon.darkSrc}
@@ -139,12 +147,13 @@ export default function PaymentMethodsSection() {
                     height={500}
                     alt={icon.alt}
                     quality={100}
-                    sizes="500px"
-                    className="hidden w-20 object-contain dark:block"
+                    sizes="(max-width: 1023px) 56px, 80px"
+                    className="hidden w-14 object-contain sm:w-16 lg:w-20 dark:block"
                   />
                 </div>
               ))}
-           </div>
+            </div>
+          </div>
         </div>
       </div>
     </PrimarySection>
