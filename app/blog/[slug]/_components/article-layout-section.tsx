@@ -26,7 +26,11 @@ export default function ArticleLayoutSection({
   children,
 }: ArticleLayoutSectionProps) {
   return (
-    <PrimarySection bg='section-6' className="pt-28 pb-8 lg:pb-12">
+    <PrimarySection
+      darkBg="section-6-dark"
+      lightBackgroundImage="linear-gradient(165deg, #fbf5ff 10.39%, #fffafc 58.1%, #eed1ff 126.5%)"
+      className="pt-28 pb-8 lg:pb-12"
+    >
       <div className="container">
         <ArticleBreadcrumb currentLabel={breadcrumbLabel} />
 

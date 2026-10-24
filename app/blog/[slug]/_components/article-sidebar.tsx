@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { startTransition, useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import type { BlogShareLink, BlogTableOfContentLink } from '@/lib/blogs';
 import { cn } from '@/lib/utils';
@@ -65,7 +65,7 @@ function scrollToSection(sectionId: string) {
 }
 
 const shareLinkClassName =
-  'flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white backdrop-blur-sm dark:border-transparent dark:bg-white/10';
+  'flex size-[38px] items-center justify-center rounded-[7px] border border-[#ebecef] bg-white dark:border-transparent dark:bg-white/10 dark:backdrop-blur-sm';
 
 type ArticleSidebarProps = {
   tableOfContents?: BlogTableOfContentLink[];
@@ -110,6 +110,12 @@ export default function ArticleSidebar({
   const [expandedIds, setExpandedIds] = useState<Set<string>>(
     () => new Set(),
   );
+  const activeIdRef = useRef(activeId);
+
+  const selectActiveId = (id: string) => {
+    activeIdRef.current = id;
+    setActiveId(id);
+  };
 
   useEffect(() => {
     if (tableOfContents.length === 0) return;
@@ -136,7 +142,12 @@ export default function ArticleSidebar({
           visibleIds.has(item.id),
         )?.id;
 
-        if (nextActive) {
+        if (!nextActive || nextActive === activeIdRef.current) {
+          return;
+        }
+
+        startTransition(() => {
+          activeIdRef.current = nextActive;
           setActiveId(nextActive);
           const parentId = findParentIdForChild(tocTree, nextActive);
           if (parentId) {
@@ -147,11 +158,11 @@ export default function ArticleSidebar({
               return next;
             });
           }
-        }
+        });
       },
       {
         rootMargin: '-15% 0px -65% 0px',
-        threshold: [0, 0.25, 1],
+        threshold: 0,
       },
     );
 
@@ -175,11 +186,11 @@ export default function ArticleSidebar({
   };
 
   return (
-    <aside className="flex w-full max-w-[341px] flex-col gap-12 self-start lg:sticky lg:top-28">
+    <aside className="flex w-full max-w-85.25 flex-col gap-12 self-start lg:sticky lg:top-28">
       <div className="flex items-start gap-3">
         <div
           aria-hidden
-          className="mt-1 flex min-h-[120px] w-1 shrink-0 self-stretch overflow-hidden rounded-full bg-[#ebecef] backdrop-blur-[10px] dark:bg-[rgba(235,236,239,0.25)]"
+          className="mt-1 flex min-h-30 w-1 shrink-0 self-stretch overflow-hidden rounded-full bg-[#ebecef] dark:bg-[rgba(235,236,239,0.25)] dark:backdrop-blur-[10px]"
         >
           <div className="h-11 w-full rounded-full bg-brand-gradient" />
         </div>
@@ -211,7 +222,7 @@ export default function ArticleSidebar({
                       href={parent.href}
                       onClick={(event) => {
                         event.preventDefault();
-                        setActiveId(parent.id);
+                        selectActiveId(parent.id);
                         scrollToSection(parent.id);
                         if (hasChildren) {
                           setExpandedIds((prev) => {
@@ -263,7 +274,7 @@ export default function ArticleSidebar({
                             href={child.href}
                             onClick={(event) => {
                               event.preventDefault();
-                              setActiveId(child.id);
+                              selectActiveId(child.id);
                               scrollToSection(child.id);
                             }}
                             className={tocLinkClass(isChildActive, true)}
@@ -284,7 +295,7 @@ export default function ArticleSidebar({
       <div className="flex flex-col gap-5">
         <div className="rounded-xl border border-[rgba(42,42,42,0.14)] bg-[linear-gradient(36.37deg,rgb(251,245,255)_10.39%,rgb(255,250,252)_58.1%,rgb(255,137,198)_126.5%)] p-6 dark:border-[0.5px] dark:border-[rgba(42,42,42,0.14)] dark:bg-[rgba(255,255,255,0.12)] dark:bg-none dark:backdrop-blur-[250px]">
           <div className="flex flex-col items-center gap-[13px] text-center">
-            <div className="relative size-[109px] overflow-hidden rounded-lg border border-[rgba(188,188,188,0.21)] bg-[rgba(255,255,255,0.93)] backdrop-blur-[2px]">
+            <div className="relative size-27.25 overflow-hidden rounded-lg border border-[rgba(188,188,188,0.21)] bg-white dark:bg-[rgba(255,255,255,0.93)] dark:backdrop-blur-[2px]">
               <Image
                 src={authorAvatarSrc}
                 alt={authorName}

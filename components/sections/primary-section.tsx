@@ -63,11 +63,12 @@ const sectionDarkBackgroundClasses = {
     "bg-[url('/images/backgrounds/section-bg-27-dark.webp')]",
 } as const;
 
+/** Fixed attachment keeps SVG/WebP heroes viewport-sized on tall pages (e.g. blog posts). */
 const sectionBackgroundLayerClassName =
-  'absolute inset-0 bg-cover bg-top bg-no-repeat';
+  'absolute inset-0 bg-cover bg-fixed bg-top bg-no-repeat';
 
 const sectionBackgroundLayerFullClassName =
-  'absolute inset-0 bg-[length:100%_100%] bg-top bg-no-repeat';
+  'absolute inset-0 bg-fixed bg-[length:100%_100%] bg-top bg-no-repeat';
 
 /** SVG section backgrounds — centered cover without cropping top effects. */
 export const sectionBackgroundCoverClassName =
