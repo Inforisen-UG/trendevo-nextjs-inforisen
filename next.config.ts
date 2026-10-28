@@ -22,16 +22,6 @@ const remoteImageHostnames = Array.from(
 );
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.trendevo.com' }],
-        destination: 'https://trendevo.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
   images: {
     qualities: [75, 100],
     deviceSizes: [640, 750, 828, 1080, 1200, 1240, 1920, 2048, 3840],
