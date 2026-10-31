@@ -104,12 +104,18 @@ export default function SiteHeader({ className }: { className?: string }) {
   }, [mobileOpen]);
 
   const closeMobileMenu = () => setMobileOpen(false);
-  const showHeaderBg = scrolled || mobileOpen;
+  const prefersSolidHeader =
+    pathname === '/api' ||
+    pathname.startsWith('/terms-of-service') ||
+    pathname.startsWith('/privacy-policy') ||
+    pathname.startsWith('/refund-policy');
+  const showHeaderBg = scrolled || mobileOpen || prefersSolidHeader;
 
   return (
+    <>
     <header
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 w-full overflow-visible transition-all duration-300',
+        'fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300',
         showHeaderBg
           ? 'border-b border-white/30 bg-white/50 backdrop-blur-xl dark:border-white/10 dark:bg-[#0d0611]/70'
           : 'border-b border-transparent bg-transparent backdrop-blur-none',
@@ -196,6 +202,7 @@ export default function SiteHeader({ className }: { className?: string }) {
           </button>
         </div>
       </div>
+    </header>
 
       <button
         type="button"
@@ -211,10 +218,10 @@ export default function SiteHeader({ className }: { className?: string }) {
       <div
         id="mobile-nav"
         className={cn(
-          'relative z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden dark:border-white/10 dark:from-[#1a0f22]/98 dark:via-[#150a1c]/98 dark:to-[#110816]/98 dark:shadow-[0_20px_50px_rgba(0,0,0,0.45)]',
+          'fixed top-[80px] right-0 left-0 z-50 overflow-hidden border-t border-[#f0d8ff]/80 bg-gradient-to-b from-white/95 via-[#fdf6ff]/95 to-[#f8efff]/95 shadow-[0_20px_50px_rgba(143,42,205,0.12)] backdrop-blur-xl transition-[max-height,opacity,transform] duration-300 ease-out min-[1100px]:hidden dark:border-white/10 dark:from-[#1a0f22]/98 dark:via-[#150a1c]/98 dark:to-[#110816]/98 dark:shadow-[0_20px_50px_rgba(0,0,0,0.45)]',
           mobileOpen
             ? 'max-h-[calc(100dvh-80px)] translate-y-0 opacity-100'
-            : 'max-h-0 -translate-y-2 opacity-0',
+            : 'max-h-0 -translate-y-2 opacity-0 pointer-events-none',
         )}
       >
         <nav className="container flex max-h-[calc(100dvh-80px)] flex-col overflow-y-auto px-1 py-5 sm:px-0 sm:py-6">
@@ -361,6 +368,6 @@ export default function SiteHeader({ className }: { className?: string }) {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

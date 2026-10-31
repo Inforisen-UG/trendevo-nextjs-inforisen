@@ -24,6 +24,7 @@ export const STATIC_ROUTES: StaticSitemapEntry[] = [
   { path: '/how-it-works', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/api', changeFrequency: 'monthly', priority: 0.75 },
   { path: '/blog', changeFrequency: 'daily', priority: 0.8 },
 
   // Platform SMM panels
