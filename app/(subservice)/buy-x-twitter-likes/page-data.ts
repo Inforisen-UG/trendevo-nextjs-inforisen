@@ -240,7 +240,7 @@ export const data: TwitterLikesPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'lnk<Sign up|https://trendevo.com/signup> with basic details and enter the TrendEvo dashboard. From there, you can browse X (Twitter) SMM Panel services, compare prices, and manage your orders from one place.',
+          'lnk<Sign up|signup> with basic details and enter the TrendEvo dashboard. From there, you can browse X (Twitter) SMM Panel services, compare prices, and manage your orders from one place.',
       },
       {
         number: '02',

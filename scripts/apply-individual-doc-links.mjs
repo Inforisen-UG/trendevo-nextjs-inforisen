@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getSignUpUrl } from './lib/perfect-app-urls.mjs';
 
 const DOC_PATH =
   process.env.INDIVIDUAL_DOC ||
@@ -36,7 +37,7 @@ const SLUG_MAP = {
 
 function resolveHref(url) {
   const pathname = url.replace('https://trendevo.com', '') || '/';
-  if (pathname === '/signup') return 'https://trendevo.com/signup';
+  if (pathname === '/signup') return getSignUpUrl();
   if (pathname === '/api') return 'https://trendevo.com/api';
   return pathname;
 }

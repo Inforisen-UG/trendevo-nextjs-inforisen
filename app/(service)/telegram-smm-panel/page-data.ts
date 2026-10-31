@@ -321,7 +321,7 @@ export const data: TelegramSmmPanelPageData = {
   workingProcess: {
     title: 'How TrendEvo gt<Telegram SMM Panel> Works',
     subtitle:
-      'TrendEvo makes Telegram growth simple for Bangladeshi users. You can choose a service, place your order, lnk<pay with local methods|https://trendevo.com/signup>, and track everything from one easy dashboard.',
+      'TrendEvo makes Telegram growth simple for Bangladeshi users. You can choose a service, place your order, lnk<pay with local methods|signup>, and track everything from one easy dashboard.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -330,7 +330,7 @@ export const data: TelegramSmmPanelPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'lnk<Sign up|https://trendevo.com/signup> on TrendEvo and access your Telegram SMM Panel dashboard. The process is simple, quick, and made for businesses, creators, agencies, community owners, and resellers in Bangladesh.',
+          'lnk<Sign up|signup> on TrendEvo and access your Telegram SMM Panel dashboard. The process is simple, quick, and made for businesses, creators, agencies, community owners, and resellers in Bangladesh.',
       },
       {
         number: '02',

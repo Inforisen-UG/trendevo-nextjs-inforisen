@@ -51,11 +51,11 @@ function convertLinks(text) {
     [/Refund Policy/g, 'lnk<Refund Policy|/refund-policy>'],
     [/Contact Us page/g, 'lnk<Contact Us|/contact-us> page'],
     [/Contact Us/g, 'lnk<Contact Us|/contact-us>'],
-    [/Sign up on TrendEvo/g, 'lnk<Sign up on TrendEvo|https://trendevo.com/signup>'],
-    [/Create a free account/g, 'lnk<Create a free account|https://trendevo.com/signup>'],
-    [/Create your account/g, 'lnk<Create your account|https://trendevo.com/signup>'],
-    [/Create an account/g, 'lnk<Create an account|https://trendevo.com/signup>'],
-    [/register first/g, 'lnk<register first|https://trendevo.com/signup>'],
+    [/Sign up on TrendEvo/g, 'lnk<Sign up on TrendEvo|signup>'],
+    [/Create a free account/g, 'lnk<Create a free account|signup>'],
+    [/Create your account/g, 'lnk<Create your account|signup>'],
+    [/Create an account/g, 'lnk<Create an account|signup>'],
+    [/register first/g, 'lnk<register first|signup>'],
   ];
 
   let parts = [text];

@@ -568,7 +568,7 @@ export const data: HomePageData = {
       badge: 'Working Process',
       title: 'Start Getting Results in gt<4 Easy Steps>',
       subtitle:
-        'TrendEvo keeps SMM panel ordering simple for Bangladesh users. lnk<Create a free account|https://trendevo.com/signup>, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
+        'TrendEvo keeps SMM panel ordering simple for Bangladesh users. lnk<Create a free account|signup>, add funds with local payment methods, choose a service, and track every order from one clean dashboard.',
       underlineSrc: '/images/working-process/how-to-buy-facebook-followers-on-trendevo-step-by-step-section-underline.svg',
       underlineWidth: 216,
       titleClassName:

@@ -154,7 +154,7 @@ export const data: XTwitterSmmPanelPageData = {
     description:
       'TrendEvo gives Bangladeshi businesses, creators, agencies, public figures, startup founders, and resellers a simple way to grow on X (Twitter). Manage followers, post likes, reposts, comments, views, impressions, and engagement through one secure dashboard.',
     descriptionSecondary:
-      'Strengthen your X (Twitter) presence with affordable pricing, lnk<bKash, Nagad, Rocket payment support|https://trendevo.com/signup>, and services made for brand promotion, creator growth, public reach, and social media visibility in Bangladesh.',
+      'Strengthen your X (Twitter) presence with affordable pricing, lnk<bKash, Nagad, Rocket payment support|signup>, and services made for brand promotion, creator growth, public reach, and social media visibility in Bangladesh.',
     buttonLabel: 'Get Started Now',
     image: {
       src: '/images/service/x-twitter-smm-panel/grow-faster-with-a-trusted-x-twitter-smm-panel-in-bangladesh.webp',

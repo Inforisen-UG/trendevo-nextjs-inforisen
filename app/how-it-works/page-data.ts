@@ -94,7 +94,7 @@ export const data: HowItWorksPageData = {
     titleClassName:
       'text-4xl font-semibold leading-[1.35] tracking-wide text-[#313131] sm:text-5xl lg:text-[48px]',
     description:
-      'Ordering social media services with TrendEvo is simple. lnk<Create your account|https://trendevo.com/signup>, add funds, choose the service you need, submit the correct link and quantity, and track the order directly from your dashboard.\n\nWhether you are a creator placing your first order or an agency managing multiple clients, TrendEvo keeps the entire process in one place.',
+      'Ordering social media services with TrendEvo is simple. lnk<Create your account|signup>, add funds, choose the service you need, submit the correct link and quantity, and track the order directly from your dashboard.\n\nWhether you are a creator placing your first order or an agency managing multiple clients, TrendEvo keeps the entire process in one place.',
     descriptionClassName:
       'max-w-2xl text-base leading-relaxed text-[#343e56] sm:text-base md:text-lg',
     primaryButtonLabel: 'Create Free Account',

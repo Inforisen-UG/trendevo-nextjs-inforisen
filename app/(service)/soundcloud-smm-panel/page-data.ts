@@ -321,7 +321,7 @@ export const data: SoundcloudSmmPanelPageData = {
   workingProcess: {
     title: 'How TrendEvo gt<SoundCloud SMM Panel> Works',
     subtitle:
-      'TrendEvo keeps SoundCloud promotion simple for Bangladeshi users. You choose the service that matches your goal, submit your SoundCloud link, complete payment, and manage the lnk<order from your dashboard|https://trendevo.com/signup>.',
+      'TrendEvo keeps SoundCloud promotion simple for Bangladeshi users. You choose the service that matches your goal, submit your SoundCloud link, complete payment, and manage the lnk<order from your dashboard|signup>.',
     titleClassName:
       'max-w-[1200px] whitespace-normal text-2xl tracking-[0.48px] sm:text-[32px] md:text-[40px] lg:text-[48px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

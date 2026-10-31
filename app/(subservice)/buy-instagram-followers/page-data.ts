@@ -236,7 +236,7 @@ export const data: InstagramFollowersPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'lnk<Sign up|https://trendevo.com/signup> with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, check prices, and manage your orders from one place.',
+          'lnk<Sign up|signup> with basic details and enter the TrendEvo dashboard. From there, you can browse Instagram SMM Panel services, check prices, and manage your orders from one place.',
       },
       {
         number: '02',

@@ -29,7 +29,7 @@ export const faqCategories: FaqCategoryData[] = [
       },
       {
         question: "Do I need experience to use TrendEvo?",
-        answer: "No. TrendEvo is designed to be simple.\n\nlnk<Create an account|https://trendevo.com/signup>, add funds, select your service, submit the correct link and quantity, and track the order from your dashboard.",
+        answer: "No. TrendEvo is designed to be simple.\n\nlnk<Create an account|signup>, add funds, select your service, submit the correct link and quantity, and track the order from your dashboard.",
       },
       {
         question: "Do I need to create an account before ordering?",
@@ -37,7 +37,7 @@ export const faqCategories: FaqCategoryData[] = [
       },
       {
         question: "Is creating a TrendEvo account free?",
-        answer: "Yes. Creating an account does not require you to purchase a service immediately.\n\nYou can lnk<register first|https://trendevo.com/signup> and review available services before placing an order.",
+        answer: "Yes. Creating an account does not require you to purchase a service immediately.\n\nYou can lnk<register first|signup> and review available services before placing an order.",
       },
       {
         question: "Which social media platforms does TrendEvo support?",

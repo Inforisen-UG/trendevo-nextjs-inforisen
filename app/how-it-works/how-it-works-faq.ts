@@ -3,7 +3,7 @@ import type { FaqItem } from '@/components/sections/faq-section';
 export const howItWorksFaqItems: FaqItem[] = [
   {
     question: "Do I need an account to order from TrendEvo?",
-    answer: "Yes. lnk<Create an account|https://trendevo.com/signup> first so you can add funds, place orders, track progress, and access your order history.",
+    answer: "Yes. lnk<Create an account|signup> first so you can add funds, place orders, track progress, and access your order history.",
   },
   {
     question: "Is creating a TrendEvo account free?",

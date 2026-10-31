@@ -330,7 +330,7 @@ export const data: SnapchatSmmPanelPageData = {
         number: '01',
         title: 'Create Your TrendEvo Account',
         description:
-          'lnk<Create free account|https://trendevo.com/signup> and open your Snapchat SMM Panel dashboard. The dashboard is made for creators, influencers, agencies, lifestyle brands, online sellers, and resellers who need quick campaign control.',
+          'lnk<Create free account|signup> and open your Snapchat SMM Panel dashboard. The dashboard is made for creators, influencers, agencies, lifestyle brands, online sellers, and resellers who need quick campaign control.',
       },
       {
         number: '02',

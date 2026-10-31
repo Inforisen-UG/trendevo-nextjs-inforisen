@@ -1,6 +1,7 @@
 import type { ThingsToKnowSectionData } from '@/components/sections/things-to-know-section';
 import type { HeroSocialIcon } from '@/components/sections/hero-section';
 import { heroSocialIcons } from '@/content/hero-social-icons';
+import { signUpUrl } from '@/lib/auth-urls';
 
 type SEO = {
   title: string;
@@ -89,11 +90,11 @@ export const data: FaqPageData = {
       height: 1024,
     },
     paragraphs: [
-      'Using TrendEvo is simple. lnk<Create your account|https://trendevo.com/signup>, add funds through an available payment method, choose the service that matches your goal, enter the correct link and quantity, and track the order directly from your dashboard.',
+      'Using TrendEvo is simple. lnk<Create your account|signup>, add funds through an available payment method, choose the service that matches your goal, enter the correct link and quantity, and track the order directly from your dashboard.',
       'Always read the service description before ordering and start with an appropriate quantity when trying a service for the first time. You can also review lnk</how-it-works|how TrendEvo works> or browse the full lnk</services|service list> before placing your first order.',
     ],
     ctaLabel: 'Create Free Account',
-    ctaHref: 'https://trendevo.com/signup',
+    ctaHref: signUpUrl,
     bg: 'section-13',
   },
 };

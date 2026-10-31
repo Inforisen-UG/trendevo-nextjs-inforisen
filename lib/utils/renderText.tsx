@@ -1,5 +1,12 @@
 import Link from 'next/link';
 import { Fragment, type ReactNode } from 'react';
+import { signInUrl, signUpUrl } from '@/lib/auth-urls';
+
+const AUTH_LINK_TARGETS: Record<string, string> = {
+  signup: signUpUrl,
+  signin: signInUrl,
+  login: signInUrl,
+};
 
 export const inlineLinkClassName =
   'font-semibold text-[#8f2acd] underline decoration-[#8f2acd]/35 underline-offset-2 transition-colors hover:text-[#ae4de8] hover:decoration-[#ae4de8] dark:text-[#ae4de8] dark:decoration-[#ae4de8]/40 dark:hover:text-[#cc7aff]';
@@ -29,6 +36,10 @@ function parseLinkToken(part: string): { label: string; href: string } | null {
 
   const left = lnk[1].slice(0, pipe);
   const right = lnk[1].slice(pipe + 1);
+  const authHref = AUTH_LINK_TARGETS[right.trim().toLowerCase()];
+  if (authHref) {
+    return { label: left, href: authHref };
+  }
 
   // lnk<label|href> — href is absolute URL or path
   if (isAbsoluteHref(right) || right.startsWith('/')) {

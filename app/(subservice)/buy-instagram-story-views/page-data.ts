@@ -127,7 +127,7 @@ export const data: InstagramStoryViewsPageData = {
     underlineWidth: 190,
     title: 'Why Choose TrendEvo to Buy gt<Instagram Story Views> in Bangladesh',
     subtitle:
-      'For Bangladeshi users, Instagram Stories often work as a quick trust point before customers visit a profile, reply to an offer, or check a product. lnk<TrendEvo|/about-us> makes Story Views easier to manage with local payment support, clear order updates, and a simple lnk<SMM Panel dashboard|https://trendevo.com/signup> for creators, brands, influencers, agencies, and resellers.',
+      'For Bangladeshi users, Instagram Stories often work as a quick trust point before customers visit a profile, reply to an offer, or check a product. lnk<TrendEvo|/about-us> makes Story Views easier to manage with local payment support, clear order updates, and a simple lnk<SMM Panel dashboard|signup> for creators, brands, influencers, agencies, and resellers.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',

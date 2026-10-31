@@ -15,11 +15,11 @@ function convertLinks(text) {
     [/Explore Services/g, 'lnk<Explore Services|/services>'],
     [/View All Services/g, 'lnk<View All Services|/services>'],
     [/Browse Services/g, 'lnk<Browse Services|/services>'],
-    [/Create Your Account/g, 'lnk<Create Your Account|https://trendevo.com/signup>'],
-    [/Create Free Account/g, 'lnk<Create Free Account|https://trendevo.com/signup>'],
-    [/Create your account/g, 'lnk<Create your account|https://trendevo.com/signup>'],
-    [/Create an account/g, 'lnk<Create an account|https://trendevo.com/signup>'],
-    [/Get Started Free/g, 'lnk<Get Started Free|https://trendevo.com/signup>'],
+    [/Create Your Account/g, 'lnk<Create Your Account|signup>'],
+    [/Create Free Account/g, 'lnk<Create Free Account|signup>'],
+    [/Create your account/g, 'lnk<Create your account|signup>'],
+    [/Create an account/g, 'lnk<Create an account|signup>'],
+    [/Get Started Free/g, 'lnk<Get Started Free|signup>'],
   ];
 
   let parts = [text];
